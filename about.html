@@ -1,436 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn about Sweet Dreams Pastry Shop — our history since 2010, our mission for handcrafted desserts, and the passionate team behind every creation." />
-  <meta name="keywords" content="Sweet Dreams, pastry shop, bakery, about us, history, mission, handcrafted desserts" />
-  <meta name="author" content="Sweet Dreams Pastry Shop" />
-  <title>About Us | Sweet Dreams Pastry Shop</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Page-specific stylesheet -->
-  <link rel="stylesheet" href="about.css" />
+    <meta charset="UTF-8">
+    <title>За нас - Камист</title>
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo">Камист</div>
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="about.html">За нас</a>
+            <a href="menu.html">Меню</a>
+            <a href="reservation.html">Резервации</a>
+            <a href="contact.html">Контакти</a>
+            <a href="cart.html" class="icon-only" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="profile.html" class="icon-only" title="Профил"><i class="fa-solid fa-user"></i></a>
+        </nav>
+        <a href="menu.html" class="btn-nav">Поръчай</a>
+    </header>
 
-  <!-- ===== NAVIGATION BAR ===== -->
-  <header class="site-header" role="banner">
-    <div class="header-inner container">
-      <a href="index.html" class="logo" aria-label="Sweet Dreams — go to homepage">
-        <span class="logo-icon" aria-hidden="true">&#127856;</span>
-        <span class="logo-text">Sweet Dreams</span>
-      </a>
-
-      <!-- Hamburger toggle (mobile) -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
-
-      <nav class="primary-nav" id="primaryNav" role="navigation" aria-label="Primary navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link nav-link--active" aria-current="page">About</a></li>
-          <li><a href="menu.html" class="nav-link">Menu</a></li>
-          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===== HERO / PAGE BANNER ===== -->
-  <section class="page-hero" aria-labelledby="heroHeading">
-    <div class="page-hero__overlay">
-      <div class="container page-hero__content">
-        <p class="page-hero__eyebrow">Our Story</p>
-        <h1 id="heroHeading" class="page-hero__title">Where Every Bite Tells a Story</h1>
-        <p class="page-hero__subtitle">Handcrafted with love since 2010</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <main id="mainContent" role="main">
-
-    <!-- ── HISTORY SECTION ── -->
-    <section class="section section--light" id="history" aria-labelledby="historyHeading">
-      <div class="container section__grid section__grid--reverse">
-
-        <div class="section__text">
-          <span class="section__tag">Est. 2010</span>
-          <h2 id="historyHeading" class="section__title">A Humble Beginning, a Sweet Legacy</h2>
-          <p class="section__body">
-            Sweet Dreams was born in the autumn of 2010 in a small rented kitchen on Maple Street, when founder
-            <strong>Elena Rossi</strong> decided to turn her lifelong passion for patisserie into something the whole
-            neighbourhood could enjoy. Armed with her grandmother's recipe book, a single stand mixer, and an
-            unwavering belief that desserts should be made with honest ingredients, Elena opened the doors to what
-            was then a modest counter-service café.
-          </p>
-          <p class="section__body">
-            Word spread quickly. Within a year, the weekend queues stretched around the block, and by 2013 the shop
-            had expanded into the adjoining premises, adding a full production kitchen and a cosy seating area
-            decorated with vintage baking tins and hand-lettered menus. Today, Sweet Dreams serves hundreds of guests
-            every day — yet every croissant is still laminated by hand, every tart shell still blind-baked to order,
-            and every celebration cake still decorated with the same care that Elena poured into that very first batch
-            of almond financiers.
-          </p>
-          <a href="menu.html" class="btn btn--primary">Explore Our Menu</a>
-        </div>
-
-        <figure class="section__image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&q=80"
-            alt="Warm interior of Sweet Dreams pastry shop with wooden shelves lined with pastries"
-            class="section__image"
-            loading="lazy"
-            width="700"
-            height="500"
-          />
-          <figcaption class="section__caption">Our original Maple Street location, circa 2012</figcaption>
-        </figure>
-
-      </div>
+    <section class="intro">
+        <p class="kicker">За Камист</p>
+        <h1>Сладкарница, създадена с грижа</h1>
+        <p class="lead">Малка семейна сладкарница в сърцето на София, в която всичко се прави на ръка от 2000-та година.</p>
     </section>
 
-    <!-- ── MISSION SECTION ── -->
-    <section class="section section--cream" id="mission" aria-labelledby="missionHeading">
-      <div class="container">
-
-        <header class="section__header section__header--center">
-          <span class="section__tag">Our Philosophy</span>
-          <h2 id="missionHeading" class="section__title">Crafted by Hand. Inspired by Nature.</h2>
-          <p class="section__lead">
-            We believe that truly exceptional pastry begins long before it reaches the oven — it starts with
-            the choices made at the market, the farm, and the mill.
-          </p>
-        </header>
-
-        <div class="mission-pillars">
-
-          <article class="pillar-card" aria-labelledby="pillarQuality">
-            <div class="pillar-card__icon" aria-hidden="true">&#127807;</div>
-            <h3 id="pillarQuality" class="pillar-card__title">Premium Ingredients</h3>
-            <p class="pillar-card__body">
-              Every ingredient we use is sourced from trusted local farms and specialist suppliers. Our butter
-              comes from grass-fed cows, our flour is stone-milled, and our seasonal fruits are picked at peak
-              ripeness to ensure the deepest, most natural flavours in every bite.
-            </p>
-          </article>
-
-          <article class="pillar-card" aria-labelledby="pillarCraft">
-            <div class="pillar-card__icon" aria-hidden="true">&#128336;</div>
-            <h3 id="pillarCraft" class="pillar-card__title">Handcrafted Daily</h3>
-            <p class="pillar-card__body">
-              Nothing at Sweet Dreams is pre-made or mass-produced. Our pastry chefs arrive before dawn each
-              morning to prepare fresh doughs, custards, and glazes from scratch. This dedication to
-              craftsmanship means our display case changes with the seasons — and with our chefs' creativity.
-            </p>
-          </article>
-
-          <article class="pillar-card" aria-labelledby="pillarCommunity">
-            <div class="pillar-card__icon" aria-hidden="true">&#10084;&#65039;</div>
-            <h3 id="pillarCommunity" class="pillar-card__title">Community First</h3>
-            <p class="pillar-card__body">
-              Sweet Dreams has always been more than a bakery — it is a gathering place. We partner with local
-              schools for baking workshops, donate surplus pastries to community shelters every evening, and
-              celebrate neighbourhood milestones with custom cakes baked with genuine affection.
-            </p>
-          </article>
-
+    <section class="story">
+        <div class="story-text">
+            <p class="kicker">Нашата история</p>
+            <h2>От малка кухня до любимо място</h2>
+            <p>Всичко започна през 2000-та година съвсем просто: искахме да правим десерти, в които има истински продукти. „Камист“ не е проект, мислен в офис, а резултат от хиляди часове в малката ни семейна кухня.</p>
+            <p>Времената се променят, но ние не си променихме навиците. Продължаваме да правим всичко на ръка и да вярваме, че ако подхождаш с грижа към продуктите, вкусът винаги се получава.</p>
         </div>
-
-      </div>
+        <div class="story-img"></div>
     </section>
 
-    <!-- ── GALLERY / CREATIONS SECTION ── -->
-    <section class="section section--light" id="gallery" aria-labelledby="galleryHeading">
-      <div class="container">
-
-        <header class="section__header section__header--center">
-          <span class="section__tag">Our Creations</span>
-          <h2 id="galleryHeading" class="section__title">A Feast for the Eyes</h2>
-          <p class="section__lead">
-            Each pastry is a small work of art. Browse a selection of our most beloved creations, made fresh
-            every morning in our open kitchen.
-          </p>
-        </header>
-
-        <div class="gallery-grid" role="list">
-
-          <figure class="gallery-card" role="listitem">
-            <div class="gallery-card__img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&q=80"
-                alt="Assorted French macarons in pastel shades arranged on a marble surface"
-                class="gallery-card__img"
-                loading="lazy"
-                width="500"
-                height="400"
-              />
-            </div>
-            <figcaption class="gallery-card__caption">
-              <h3 class="gallery-card__name">French Macarons</h3>
-              <p class="gallery-card__desc">Delicate almond shells filled with seasonal ganaches and buttercreams, made fresh every morning.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card" role="listitem">
-            <div class="gallery-card__img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500&q=80"
-                alt="Layered chocolate cake with glossy ganache drip on a white cake stand"
-                class="gallery-card__img"
-                loading="lazy"
-                width="500"
-                height="400"
-              />
-            </div>
-            <figcaption class="gallery-card__caption">
-              <h3 class="gallery-card__name">Signature Chocolate Cake</h3>
-              <p class="gallery-card__desc">Seven layers of dark chocolate sponge, salted caramel mousse, and a mirror-glaze finish.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card" role="listitem">
-            <div class="gallery-card__img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=80"
-                alt="Golden croissants fresh from the oven on a wire cooling rack"
-                class="gallery-card__img"
-                loading="lazy"
-                width="500"
-                height="400"
-              />
-            </div>
-            <figcaption class="gallery-card__caption">
-              <h3 class="gallery-card__name">Butter Croissants</h3>
-              <p class="gallery-card__desc">Hand-laminated with 27 layers of French AOP butter for the perfect honeycomb crumb and shattering crust.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card" role="listitem">
-            <div class="gallery-card__img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500&q=80"
-                alt="Fresh strawberry tart with pastry cream and glazed berries in a golden shell"
-                class="gallery-card__img"
-                loading="lazy"
-                width="500"
-                height="400"
-              />
-            </div>
-            <figcaption class="gallery-card__caption">
-              <h3 class="gallery-card__name">Seasonal Fruit Tarts</h3>
-              <p class="gallery-card__desc">Crisp pâte sablée shells filled with vanilla bean crème pâtissière and crowned with the finest seasonal fruit.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card" role="listitem">
-            <div class="gallery-card__img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=500&q=80"
-                alt="Cinnamon rolls with cream cheese glaze on a rustic wooden board"
-                class="gallery-card__img"
-                loading="lazy"
-                width="500"
-                height="400"
-              />
-            </div>
-            <figcaption class="gallery-card__caption">
-              <h3 class="gallery-card__name">Cinnamon Rolls</h3>
-              <p class="gallery-card__desc">Pillowy brioche dough swirled with brown butter, cinnamon, and brown sugar, finished with a tangy cream cheese glaze.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="gallery-card" role="listitem">
-            <div class="gallery-card__img-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=80"
-                alt="Elegant celebration cake decorated with fresh flowers and gold leaf"
-                class="gallery-card__img"
-                loading="lazy"
-                width="500"
-                height="400"
-              />
-            </div>
-            <figcaption class="gallery-card__caption">
-              <h3 class="gallery-card__name">Celebration Cakes</h3>
-              <p class="gallery-card__desc">Custom-designed for every occasion — from intimate birthday cakes to grand wedding centrepieces.</p>
-            </figcaption>
-          </figure>
-
+    <section class="expect">
+        <div class="expect-head">
+            <p class="kicker">Какво да очаквате</p>
+            <h2>Опит, изграден около детайла</h2>
         </div>
-      </div>
+        <div class="expect-grid">
+            <div class="expect-item">
+                <h3>Прясно и подбрано меню</h3>
+                <p>Менюто ни е малко, защото държим всичко да е прясно и направено по наши рецепти. Работим само с белгийски шоколад, фермерско масло и качествени продукти от местните производители.</p>
+            </div>
+            <div class="expect-item">
+                <h3>Спокойна атмосфера</h3>
+                <p>Атмосферата ще ви измъкне от шума на центъра на София. Интериорният дизайн е подбран, за да допълни преживяването ви по най-добрия начин.</p>
+            </div>
+            <div class="expect-item">
+                <h3>Грижа от първия момент</h3>
+                <p>Сладкарите ни влагат много старание в това, което ви сервират, а хората в салона ще ви посрещнат с грижа и отношение.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- ── TEAM SECTION ── -->
-    <section class="section section--cream" id="team" aria-labelledby="teamHeading">
-      <div class="container">
-
-        <header class="section__header section__header--center">
-          <span class="section__tag">The People</span>
-          <h2 id="teamHeading" class="section__title">Meet the Hands Behind the Magic</h2>
-          <p class="section__lead">
-            Our small but passionate team brings together decades of patisserie experience, a love of local
-            produce, and an unshakeable commitment to making your day a little sweeter.
-          </p>
-        </header>
-
-        <div class="team-grid">
-
-          <article class="team-card" aria-labelledby="memberElena">
-            <div class="team-card__avatar-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=400&q=80"
-                alt="Elena Rossi, founder and head pastry chef, smiling in the kitchen"
-                class="team-card__avatar"
-                loading="lazy"
-                width="400"
-                height="400"
-              />
-            </div>
-            <div class="team-card__info">
-              <h3 id="memberElena" class="team-card__name">Elena Rossi</h3>
-              <p class="team-card__role">Founder &amp; Head Pastry Chef</p>
-              <p class="team-card__bio">
-                Trained at Le Cordon Bleu Paris and with 20 years of patisserie experience, Elena's philosophy
-                is simple: use the best ingredients, respect the craft, and always bake with joy.
-              </p>
-            </div>
-          </article>
-
-          <article class="team-card" aria-labelledby="memberMarco">
-            <div class="team-card__avatar-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1583394293214-0b3a4c4b4b4b?w=400&q=80"
-                alt="Marco Bianchi, head baker, shaping dough at the workbench"
-                class="team-card__avatar"
-                loading="lazy"
-                width="400"
-                height="400"
-              />
-            </div>
-            <div class="team-card__info">
-              <h3 id="memberMarco" class="team-card__name">Marco Bianchi</h3>
-              <p class="team-card__role">Head Baker</p>
-              <p class="team-card__bio">
-                Marco's mastery of fermentation and laminated doughs has earned Sweet Dreams a reputation for
-                the finest croissants in the city. He sources his heritage grains directly from a family mill
-                in Tuscany.
-              </p>
-            </div>
-          </article>
-
-          <article class="team-card" aria-labelledby="memberSophie">
-            <div class="team-card__avatar-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80"
-                alt="Sophie Laurent, cake designer, decorating a tiered wedding cake"
-                class="team-card__avatar"
-                loading="lazy"
-                width="400"
-                height="400"
-              />
-            </div>
-            <div class="team-card__info">
-              <h3 id="memberSophie" class="team-card__name">Sophie Laurent</h3>
-              <p class="team-card__role">Cake Designer</p>
-              <p class="team-card__bio">
-                With a background in fine arts and sugar craft, Sophie transforms every celebration cake into
-                an edible sculpture. Her botanical designs and hand-painted tiers have been featured in
-                several bridal publications.
-              </p>
-            </div>
-          </article>
-
+    <section class="crew">
+        <p class="kicker">Екипът</p>
+        <h2>Хора, които обичат занаята си</h2>
+        <div class="crew-body">
+            <p>Зад витрината стоят хора, които наистина обичат занаята си. Нашите сладкари съчетават това, което са научили от старите майстори, с нови идеи и много опити, докато не се получи перфектният баланс.</p>
+            <p>Вярваме, че ако на нас ни е приятно да работим заедно, това се усеща и в храната. Затова за нас „Камист“ не е просто работа, а мястото, където всеки десерт има своята малка история.</p>
         </div>
-      </div>
     </section>
 
-    <!-- ── CALL TO ACTION ── -->
-    <section class="cta-section" aria-labelledby="ctaHeading">
-      <div class="container cta-section__inner">
-        <h2 id="ctaHeading" class="cta-section__title">Ready to Taste the Difference?</h2>
-        <p class="cta-section__body">
-          Visit us at 14 Maple Street, open Tuesday through Sunday from 7 am to 7 pm. We also take custom
-          orders for celebrations — get in touch and let's create something unforgettable together.
-        </p>
-        <div class="cta-section__actions">
-          <a href="menu.html" class="btn btn--primary">View Our Menu</a>
-          <a href="contact.html" class="btn btn--outline">Order a Custom Cake</a>
+    <footer>
+        <div class="footer-cols">
+            <div>
+                <h4>Камист</h4>
+                <p>Сладки моменти от 2010.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5>Навигация</h5>
+                <a href="index.html">Начало</a>
+                <a href="about.html">За нас</a>
+                <a href="menu.html">Меню</a>
+                <a href="reservation.html">Резервации</a>
+                <a href="contact.html">Контакти</a>
+            </div>
+            <div>
+                <h5>Моят профил</h5>
+                <a href="cart.html">Количка</a>
+                <a href="profile.html">Профил</a>
+            </div>
+            <div>
+                <h5>Контакти</h5>
+                <p>ул. Витоша 15, София</p>
+                <p>+359 888 123 456</p>
+                <p>hello@kamist.bg</p>
+            </div>
         </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo--footer" aria-label="Sweet Dreams — go to homepage">
-          <span class="logo-icon" aria-hidden="true">&#127856;</span>
-          <span class="logo-text">Sweet Dreams</span>
-        </a>
-        <p class="footer-brand__tagline">Handcrafted pastries made with love, every single day since 2010.</p>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <h3 class="footer-nav__heading">Quick Links</h3>
-        <ul class="footer-nav__list">
-          <li><a href="index.html" class="footer-nav__link">Home</a></li>
-          <li><a href="about.html" class="footer-nav__link">About Us</a></li>
-          <li><a href="menu.html" class="footer-nav__link">Menu</a></li>
-          <li><a href="gallery.html" class="footer-nav__link">Gallery</a></li>
-          <li><a href="contact.html" class="footer-nav__link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <address class="footer-contact">
-        <h3 class="footer-contact__heading">Visit Us</h3>
-        <p>14 Maple Street<br />Old Town, NY 10001</p>
-        <p><a href="tel:+12125550192" class="footer-contact__link">+1 (212) 555-0192</a></p>
-        <p><a href="mailto:hello@sweetdreams.com" class="footer-contact__link">hello@sweetdreams.com</a></p>
-        <p class="footer-contact__hours">Tue – Sun &nbsp;|&nbsp; 7:00 am – 7:00 pm</p>
-      </address>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p class="footer-bottom__copy">&copy; <span id="footerYear"></span> Sweet Dreams Pastry Shop. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- ===== SCRIPTS ===== -->
-  <script>
-    // Dynamic copyright year
-    document.getElementById('footerYear').textContent = new Date().getFullYear();
-
-    // Mobile navigation toggle
-    const navToggle = document.getElementById('navToggle');
-    const primaryNav = document.getElementById('primaryNav');
-
-    navToggle.addEventListener('click', () => {
-      const isOpen = primaryNav.classList.toggle('primary-nav--open');
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    // Close nav when a link is clicked (mobile UX)
-    primaryNav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        primaryNav.classList.remove('primary-nav--open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
-
+        <p class="copyright">© 2026 Камист.</p>
+    </footer>
 </body>
 </html>
