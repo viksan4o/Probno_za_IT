@@ -25,6 +25,15 @@ body {
     font-family: Georgia, serif;
     font-size: 26px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .logo span, .btn-link, .feature h3, footer h4 span {
     color: #c9856b;
