@@ -2,10 +2,11 @@
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>За нас - Камист</title>
-    <link rel="stylesheet" href="style_index.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -19,57 +20,72 @@
             <a href="cart.html" class="icon-only" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="profile.html" class="icon-only" title="Профил"><i class="fa-solid fa-user"></i></a>
         </nav>
-        <a href="menu.html" class="btn-nav">Поръчай</a>
     </header>
 
-    <section class="intro">
-        <p class="kicker">За Камист</p>
-            <h1>Сладкарница, създадена с грижа</h1>
-            <p class="lead">Малка семейна сладкарница в сърцето на София, в която всичко се прави на ръка от 2000-та година.</p>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1 class="hero-title">Камист — <span class="accent-italic">малка семейна сладкарница</span> в сърцето на София, в която всичко се прави на ръка от 2000-та година.</h1>
+            </div>
         </section>
 
-        <section class="story">
+        <section class="story-section">
             <div class="container">
-            <div class="story-text">
-                <p class="kicker">Нашата история</p>
-                        <h2>От малка кухня до любимо място</h2>
-                        <p>Всичко започна през 2000-та година съвсем просто: искахме да правим десерти, в които има истински продукти. „Камист" не е проект, мислен в офис, а резултат от хиляди часове в малката ни семейна кухня.</p>
+                <div class="row">
+                    <div class="col-text">
+                        <h2 class="kicker">Нашата история</h2>
+                        <p>Всичко започна през 2000-та година съвсем просто: искахме да правим десерти, в които има истински продукти. „Камист“ не е проект, мислен в офис, а резултат от хиляди часове в малката ни семейна кухня.</p>
                         <p>Времената се променят, но ние не си променихме навиците. Продължаваме да правим всичко на ръка и да вярваме, че ако подхождаш с грижа към продуктите, вкусът винаги се получава.</p>
                     </div>
-                    <div class="story-img"></div>
+                    <div class="col-img">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.ntwbILmTzZiuUrTvO8G3AAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Нашата история" class="rounded-img">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="expect">
-            <div class="expect-head">
-                <p class="kicker">Какво да очаквате</p>
-                <h2>Опит, изграден около детайла</h2>
-            </div>
-            <div class="expect-grid">
-                <div class="expect-item">
-                    <h3>Прясно и подбрано меню</h3>
-                    <p>Менюто ни е малко, защото държим всичко да е прясно и направено по наши рецепти. Работим само с белгийски шоколад, фермерско масло и качествени продукти от местните производители.</p>
+        <section class="expect-section">
+            <div class="container">
+                <br>
+                <br>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Прясно и подбрано меню</h3>
+                        <p>Менюто ни е малко, защото държим всичко да е прясно и направено по наши рецепти. Работим само с белгийски шоколад, фермерско масло и качествени продукти от местните производители.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Спокойна атмосфера</h3>
+                        <p>Атмосферата ще ви измъкне от шума на центъра на София. Интериорният дизайн е подбран, за да допълни преживяването ви по най-добрия начин.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Грижа от първия момент</h3>
+                        <p>Сладкарите ни влагат много старание в това, което ви сервират, а хората в салона ще ви посрещнат с грижа и отношение.</p>
+                    </div>
                 </div>
-                <div class="expect-item">
-                    <h3>Спокойна атмосфера</h3>
-                    <p>Атмосферата ще ви измъкне от шума на центъра на София. Интериорният дизайн е подбран, за да допълни преживяването ви по най-добрия начин.</p>
+                <div class="full-img-box">
+                    <img src="C:\Users\kosta\OneDrive\Картини\Gemini_Generated_Image_wmanrywmanrywman.png" alt="Атмосфера" class="rounded-img">
                 </div>
-                <div class="expect-item">
-                    <h3>Грижа от първия момент</h3>
-                    <p>Сладкарите ни влагат много старание в това, което ви сервират, а хората в салона ще ви посрещнат с грижа и отношение.</p>
-                </div>
+                <br>
+                <br>
             </div>
         </section>
 
-        <section class="crew">
-            <p class="kicker">Екипът</p>
-            <h2>Хора, които обичат занаята си</h2>
-            <div class="crew-body">
-                <p>Зад витрината стоят хора, които наистина обичат занаята си. Нашите сладкари съчетават това, което са научили от старите майстори, с нови идеи и много опити, докато не се получи перфектният баланс.</p>
-                <p>Вярваме, че ако на нас ни е приятно да работим заедно, това се усеща и в храната. Затова за нас „Камист" не е просто работа, а както където всеки десерт има своята малка история.</p>
+        <section class="crew-section">
+            <div class="container">
+                <div class="row reverse">
+                    <div class="col-text">
+                        <h2 class="kicker">Екипът</h2>
+                        <p>Зад витрината стоят хора, които наистина обичат занаята си. Нашите сладкари съчетават това, което са научили от старите майстори, с нови идеи и много опити, докато не се получи перфектният баланс.</p>
+                        <p>Вярваме, че ако на нас ни е приятно да работим заедно, това се усеща и в храната. Затова за нас „Камист“ не е просто работа, а мястото, където всеки десерт има своята малка история.</p>
+                    </div>
+                    <div class="col-img">
+                        <img src="C:\Users\kosta\OneDrive\Картини\Gemini_Generated_Image_8tlp358tlp358tlp (1).png" alt="Екипът" class="rounded-img">
+                    </div>
+                </div>
             </div>
         </section>
+    </main>
+
     <footer>
         <div class="footer-cols">
             <div>

@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #e8dccb;
+    font-family: 'Inter', sans-serif;
+    background: #faebd6;
     color: #4a3528;
     line-height: 1.7;
 }
 h1, h2, h3, h4 {
-    font-family: Georgia, serif;
+    font-family: 'Playfair Display', serif;
     color: #3a2418;
 }
 .navbar {
