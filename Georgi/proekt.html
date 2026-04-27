@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="proekt.css.css">
+</head>
+<body>
+
+<section class="container">
+
+    <h1>Свържи се с нас</h1>
+    <p class="subtitle">Имаш въпрос или резервация? Пиши ни.</p>
+
+    <div id="status" class="status"></div>
+
+    <div class="info">
+        <p> София, бул. Дондуков</p>
+        <p> <a href="tel:+35988877999">+359 888 777 999</a></p>
+        <p> contact@restaurant.bg</p>
+    </div>
+
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps?q=Sofia%20Dondukov&output=embed"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Вашето име" required>
+        <input type="email" placeholder="Вашият имейл" required>
+        <textarea placeholder="Напишете вашето съобщение..." required></textarea>
+        <button type="submit">Изпрати съобщение</button>
+    </form>
+
+    <p id="message" class="message"></p>
+
+</section>
+
+<script src="contact.js"></script>
+</body>
+</html>
