@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Камист</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-logo">Камист</div>
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="about.html">За нас</a>
+            <a href="menu.html" class="current-page">Меню</a>
+            <a href="reservation.html">Резервации</a>
+            <a href="Georgi/proekt.html">Контакти</a>
+            <a href="cart.html" class="icon-link" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="profile.html" class="icon-link" title="Профил"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro-section">
+            <h1 class="page-title">Нашето <span class="italic-accent">меню</span></h1>
+            <p class="page-subtitle">Подбрани десерти и напитки, приготвени с грижа и качествени съставки.</p>
+        </section>
+        <section class="menu-section">
+            <div class="page-container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Категория</label>
+                        <select id="categoryFilter">
+                            <option value="all">Всички</option>
+                            <option value="torti">Торти</option>
+                            <option value="deserti">Десерти</option>
+                            <option value="napitki">Напитки</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="typeFilter">Тип</label>
+                        <select id="typeFilter">
+                            <option value="all">Всички</option>
+                            <option value="sladko">Сладко</option>
+                            <option value="vegan">Веган</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="searchInput">Търсене</label>
+                        <input type="text" id="searchInput" placeholder="Търси десерт...">
+                    </div>
+                </div>
+                <div id="productsGrid" class="products-grid"></div>
+                <p id="noResults" class="no-results" style="display:none;">Няма продукти, които да отговарят на филтрите.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h4>Камист</h4>
+                <p>Сладки моменти от 2010.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5>Навигация</h5>
+                <a href="index.html">Начало</a>
+                <a href="about.html">За нас</a>
+                <a href="menu.html">Меню</a>
+                <a href="reservation.html">Резервации</a>
+                <a href="Georgi/proekt.html">Контакти</a>
+            </div>
+            <div>
+                <h5>Моят профил</h5>
+                <a href="cart.html">Количка</a>
+                <a href="profile.html">Профил</a>
+            </div>
+            <div>
+                <h5>Контакти</h5>
+                <p>ул. Витоша 15, София</p>
+                <p>+359 888 123 456</p>
+                <p>hello@kamist.bg</p>
+            </div>
+        </div>
+        <p class="copyright-text">© 2026 Камист.</p>
+    </footer>
+    <button id="scrollTop" title="Нагоре"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="menu.js"></script>
+</body>
+</html>
