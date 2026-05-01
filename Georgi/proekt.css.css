@@ -34,6 +34,9 @@ h1, h2, h3, h4 {
 .site-header nav a.current-page {
     color: #c9856b;
 }
+.site-header nav a.current-page {
+    font-weight: 600;
+}
 .icon-link {
     font-size: 20px;
 }

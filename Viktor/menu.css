@@ -26,16 +26,24 @@ h1, h2, h3, h4 {
     text-decoration: none;
     margin: 0 14px;
 }
-.site-header nav a.current-page,
-.site-header nav a:hover {
+.site-header nav a:hover,
+.site-header nav a.current-page {
     color: #c9856b;
+}
+.site-header nav a.current-page {
+    font-weight: 600;
 }
 .intro-section {
     text-align: center;
     padding: 60px 20px;
 }
 .page-title {
-    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #3a2418;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
 }
 .italic-accent {
     font-style: italic;
@@ -43,7 +51,10 @@ h1, h2, h3, h4 {
 }
 .page-subtitle {
     color: #7a6a5a;
-    margin-top: 10px;
+    margin: 18px auto 0;
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.75;
 }
 .menu-section {
     padding: 60px 20px;
