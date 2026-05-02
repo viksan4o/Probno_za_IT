@@ -1,19 +1,16 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     background: #f2e8db;
     font-family: 'Inter', sans-serif;
     color: #4a3528;
     line-height: 1.7;
 }
-
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     color: #3a2418;
 }
-
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -21,21 +18,18 @@ h1, h2, h3, h4 {
     padding: 20px 60px;
     background: #f2e8db;
 }
-
 .site-logo {
     font-family: Georgia, serif;
     font-size: 26px;
     font-weight: bold;
-    color: #3a2418;
 }
-
 .site-header nav a {
     color: #4a3528;
     text-decoration: none;
     margin: 0 14px;
     font-size: 16px;
+    font-weight: 400;
 }
-
 .site-header nav a:hover,
 .site-header nav a.current-page {
     color: #c9856b;
@@ -43,16 +37,13 @@ h1, h2, h3, h4 {
 .site-header nav a.current-page {
     font-weight: 600;
 }
-
 .icon-link {
     font-size: 20px;
 }
-
 .italic-accent {
     font-style: italic;
     color: #c9856b;
 }
-
 .hero-custom-cakes {
     text-align: center;
     padding: 40px 20px;
@@ -62,7 +53,6 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid #d4c5b9;
     position: relative;
 }
-
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -71,12 +61,10 @@ h1, h2, h3, h4 {
     bottom: 0;
     background-color: rgba(250, 235, 214, 0.75);
 }
-
 .hero-texta {
     position: relative;
     z-index: 1;
 }
-
 .hero-texta h1 {
     font-family: 'Playfair Display', serif;
     font-size: 34px;
@@ -85,7 +73,6 @@ h1, h2, h3, h4 {
     margin: 0 auto;
     line-height: 1.4;
 }
-
 .hero-texta p {
     font-family: 'Inter', sans-serif;
     font-size: 17px;
@@ -95,15 +82,12 @@ h1, h2, h3, h4 {
     margin: 18px auto 0;
     line-height: 1.75;
 }
-
 .order-section {
     margin-top: 50px;
 }
-
 .order-info {
     max-width: 900px;
     margin: 0 auto 30px;
-    font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.8;
     padding: 25px;
@@ -111,12 +95,10 @@ h1, h2, h3, h4 {
     border-radius: 10px;
     background-color: rgba(242, 232, 219, 0.3);
 }
-
 .order-info p {
     margin-bottom: 10px;
     color: #4a3528;
 }
-
 #cakeOrderForm {
     max-width: 900px;
     margin: 0 auto 50px;
@@ -125,18 +107,15 @@ h1, h2, h3, h4 {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
 .form-group {
     margin-bottom: 20px;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
     color: #4a3528;
 }
-
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group input[type="email"],
@@ -147,11 +126,9 @@ h1, h2, h3, h4 {
     border: 1px solid #d4c5b9;
     border-radius: 5px;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
     color: #4a3528;
     background-color: white;
 }
-
 .form-group input[type="file"]::-webkit-file-upload-button {
     background-color: #c9856b;
     color: white;
@@ -159,13 +136,10 @@ h1, h2, h3, h4 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
 .form-group input[type="file"]::-webkit-file-upload-button:hover {
     background-color: #a86c52;
 }
-
 .button-primary {
     display: block;
     width: 100%;
@@ -177,21 +151,17 @@ h1, h2, h3, h4 {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     text-align: center;
     text-decoration: none;
 }
-
 .button-primary:hover {
     background-color: #a86c52;
 }
-
 footer {
     background: #3a2418;
     color: #d4c5b9;
     padding: 45px 60px 20px;
 }
-
 .footer-columns {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
@@ -200,19 +170,16 @@ footer {
     border-bottom: 1px solid #5a4030;
     margin-bottom: 15px;
 }
-
 footer h4 {
     font-size: 22px;
     color: white;
     margin: 0 0 10px;
 }
-
 footer h5 {
     color: white;
     font-size: 14px;
     margin: 0 0 12px;
 }
-
 footer p, footer a {
     display: block;
     color: #d4c5b9;
@@ -220,28 +187,23 @@ footer p, footer a {
     margin: 4px 0;
     text-decoration: none;
 }
-
 footer a:hover {
     color: #e8b09a;
 }
-
 .social-icons {
     margin-top: 10px;
 }
-
 .social-icons a {
     display: inline-block;
     font-size: 18px;
     margin-right: 14px;
     color: #d4c5b9;
 }
-
 .copyright-text {
     text-align: center;
     font-size: 12px;
     color: #a0907f;
 }
-
 .hidden {
     display: none;
 }
