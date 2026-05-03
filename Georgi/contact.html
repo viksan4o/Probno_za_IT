@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти</title>
-    <link rel="stylesheet" href="proekt.css.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -17,48 +17,59 @@
             <a href="../Viktor/menu.html">Меню</a>
             <a href="../Kostadin/custom-cakes.html">Торти по поръчка</a>
             <a href="../reservation.html">Резервации</a>
-            <a href="proekt.html" class="current-page">Контакти</a>
+            <a href="contact.html" class="current-page">Контакти</a>
             <a href="../cart.html" class="icon-link" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="../profile.html" class="icon-link" title="Профил"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
 
-<section class="container">
+    <section class="intro-section">
+        <h1 class="page-title">Свържи се с нас</h1>
+    </section>
 
-    <h1>Свържи се с нас</h1>
-    <p class="subtitle">Имаш въпрос или резервация? Пиши ни.</p>
+    <section class="contact-section">
+        <div class="page-container">
+            <div id="status" class="status"></div>
 
-    <div id="status" class="status"></div>
+            <div class="contact-details">
+                <div class="info-card">
+                    <h3>Адрес</h3>
+                    <p>ул. Витоша 15, София</p>
+                </div>
+                <div class="info-card">
+                    <h3>Телефон</h3>
+                    <p><a href="tel:+359888123456">+359 888 123 456</a></p>
+                </div>
+                <div class="info-card">
+                    <h3>Имейл</h3>
+                    <p><a href="mailto:nyakakuvmail@kamist.bg">nyakakuvmail@kamist.bg</a></p>
+                </div>
+            </div>
 
-    <div class="info">
-        <p> София, бул. Дондуков</p>
-        <p> <a href="tel:+35988877999">+359 888 777 999</a></p>
-        <p> contact@restaurant.bg</p>
-    </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps?q=Sofia%20Vitosha%2015&output=embed"
+                    loading="lazy"></iframe>
+            </div>
 
-    <div class="map">
-        <iframe 
-            src="https://www.google.com/maps?q=Sofia%20Dondukov&output=embed"
-            loading="lazy">
-        </iframe>
-    </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" placeholder="Вашето име" required>
+                    <input type="email" placeholder="Вашият имейл" required>
+                    <textarea placeholder="Напишете вашето съобщение..." required></textarea>
+                    <button type="submit">Изпрати съобщение</button>
+                </form>
 
-    <form id="contactForm">
-        <input type="text" placeholder="Вашето име" required>
-        <input type="email" placeholder="Вашият имейл" required>
-        <textarea placeholder="Напишете вашето съобщение..." required></textarea>
-        <button type="submit">Изпрати съобщение</button>
-    </form>
-
-    <p id="message" class="message"></p>
-
-</section>
+                <p id="message" class="message"></p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-columns">
             <div>
                 <h4>Камист</h4>
-                <p>Сладки моменти от 2010.</p>
+                <p>Сладки моменти от 2000.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -72,7 +83,7 @@
                 <a href="../Viktor/menu.html">Меню</a>
                 <a href="../Kostadin/custom-cakes.html">Торти по поръчка</a>
                 <a href="../reservation.html">Резервации</a>
-                <a href="proekt.html">Контакти</a>
+                <a href="contact.html">Контакти</a>
             </div>
             <div>
                 <h5>Моят профил</h5>
@@ -83,7 +94,7 @@
                 <h5>Контакти</h5>
                 <p>ул. Витоша 15, София</p>
                 <p>+359 888 123 456</p>
-                <p>hello@kamist.bg</p>
+                <p>nyakakuvmail@kamist.bg</p>
             </div>
         </div>
         <p class="copyright-text">© 2026 Камист.</p>
