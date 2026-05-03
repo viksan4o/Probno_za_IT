@@ -18,8 +18,4 @@ form.addEventListener('submit', e => {
     message.textContent = `Благодарим, ${name}! Съобщението е изпратено.`;
     form.reset();
     setTimeout(() => message.textContent = '', 4000);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af

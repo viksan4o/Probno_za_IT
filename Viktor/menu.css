@@ -25,8 +25,6 @@ h1, h2, h3, h4 {
     color: #4a3528;
     text-decoration: none;
     margin: 0 14px;
-    font-size: 16px;
-    font-weight: 400;
 }
 .site-header nav a:hover,
 .site-header nav a.current-page {
@@ -34,9 +32,6 @@ h1, h2, h3, h4 {
 }
 .site-header nav a.current-page {
     font-weight: 600;
-}
-.icon-link {
-    font-size: 20px;
 }
 .intro-section {
     text-align: center;

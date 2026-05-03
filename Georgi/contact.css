@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-=======
-* {margin:0; padding:0; box-sizing:border-box;}
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af
 body {
     font-family: 'Inter', sans-serif;
     background: #faebd6;
@@ -46,7 +42,6 @@ h1, h2, h3, h4 {
 .icon-link {
     font-size: 20px;
 }
-<<<<<<< HEAD
 .intro-section {
     text-align: center;
     padding: 40px 20px;
@@ -120,34 +115,10 @@ h1, h2, h3, h4 {
 .status {
     margin-bottom: 20px;
     padding: 12px;
-=======
-.container {
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    text-align: center;
-}
-.contact-banner {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 14px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-h1 {font-size: 36px; margin-bottom: 10px;}
-.subtitle {color: #7a6a5a; margin-bottom: 25px;}
-.status {
-    margin-bottom: 20px; padding: 12px;
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af
     border-radius: 10px;
     font-weight: bold;
     background: #efe7dc;
 }
-<<<<<<< HEAD
 form {
     display: flex;
     flex-direction: column;
@@ -187,34 +158,6 @@ button:hover {
     font-weight: bold;
     color: #4caf50;
 }
-=======
-.info p {margin: 6px 0; font-size: 15px;}
-.info a {color: #c9856b; text-decoration: none;}
-.info a:hover {text-decoration: underline;}
-.map iframe {
-    width: 100%; height: 260px; border: none;
-    border-radius: 12px; margin: 20px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-form {display: flex; flex-direction: column; gap: 15px;}
-input, textarea {
-    padding: 14px; border-radius: 10px;
-    border: 1px solid #ddd; background: #faf8f5;
-    color: #4a3528; font-size: 14px;
-}
-input:focus, textarea:focus {
-    border-color: #c9856b; background: #fff;
-    outline: none;
-}
-textarea {resize: none; height: 130px;}
-button {
-    padding: 14px; border-radius: 25px; border: none;
-    background: #c9856b; color: #fff; font-weight: bold;
-    cursor: pointer;
-}
-button:hover {background: #b07258;}
-.message {margin-top: 15px; font-weight: bold; color: #4caf50;}
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af
 footer {
     background: #3a2418;
     color: #d4c5b9;
@@ -262,12 +205,3 @@ footer a:hover {
     font-size: 12px;
     color: #a0907f;
 }
-<<<<<<< HEAD
-=======
-@media(max-width: 600px) {
-    .container {margin: 20px; padding: 25px;}
-    .site-header {padding: 15px 20px; flex-wrap: wrap;}
-    footer {padding: 30px 20px 15px;}
-    .footer-columns {grid-template-columns: 1fr;}
-}
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af

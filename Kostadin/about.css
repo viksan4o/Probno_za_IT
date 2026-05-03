@@ -31,19 +31,12 @@ body {
     text-decoration: none;
     margin: 0 14px;
     font-size: 16px;
-    font-weight: 400;
 }
-<<<<<<< HEAD
 .site-header nav a:hover {
     color: #c9856b;
 }
-=======
-.site-header nav a:hover,
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af
 .site-header nav a.current-page {
     color: #c9856b;
-}
-.site-header nav a.current-page {
     font-weight: 600;
 }
 .icon-link {
@@ -100,7 +93,7 @@ body {
 .action-panel {
     background-color: #e8dccb;
     padding: 36px 34px;
-    border-radius: 15px;
+    border-radius: 28px;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(58, 36, 24, 0.12);
     max-width: 100%;
@@ -128,7 +121,6 @@ body {
     line-height: 1.8;
 }
 .full-image-box {
-    width: 100%;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -162,7 +154,7 @@ section {
 }
 .values-section {
     background-color: #faebd6;
-    padding: 50px 0;
+    padding: 0;
 }
 .content-row {
     display: flex;
@@ -218,12 +210,9 @@ section {
     gap: 18px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
-<<<<<<< HEAD
 .values-section .info-card {
     background-color: #e8dccb;
 }
-=======
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af
 .info-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
@@ -281,31 +270,3 @@ footer a:hover {
     font-size: 12px;
     color: #a0907f;
 }
-<<<<<<< HEAD
-=======
-@media (max-width: 850px) {
-    .content-row, .reversed, .cards-grid, .footer-row {
-        flex-direction: column;
-        text-align: center;
-    }
-    section {
-        padding: 60px 0;
-    }
-    .cards-grid {
-        margin-bottom: 40px;
-    }
-    .site-header {
-        flex-direction: column;
-        padding: 15px 20px;
-    }
-    .site-header nav {
-        margin: 15px 0;
-    }
-    .site-header nav a {
-        margin: 0 8px;
-    }
-    .order-button {
-        margin-top: 10px;
-    }
-}
->>>>>>> 6a18a1b03728e6364b5d126a6a9ec73b6eca23af
