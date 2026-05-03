@@ -46,6 +46,10 @@ h1, h2, h3, h4 {
     padding: 12px 26px;
     text-decoration: none;
     border-radius: 25px;
+    transition: background 0.25s, color 0.25s;
+}
+.button-primary:hover {
+    background: #b07258;
 }
 .hero-section {
     display: flex;
@@ -79,6 +83,12 @@ h1, h2, h3, h4 {
     padding: 10px 24px;
     text-decoration: none;
     border-radius: 25px;
+    transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.button-secondary:hover {
+    background: #3a2418;
+    color: #fff;
+    border-color: #3a2418;
 }
 .hero-image {
     flex: 1;
@@ -96,6 +106,20 @@ h1, h2, h3, h4 {
 .feature-card {
     flex: 1 1 280px;
     text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background 0.25s, transform 0.25s;
+}
+.feature-card:hover {
+    background: #fbf3e4;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(58, 36, 24, 0.08);
+}
+.feature-card h3 {
+    transition: color 0.25s;
+}
+.feature-card:hover h3 {
+    color: #c9856b;
 }
 .feature-card img {
     width: 100%;
@@ -121,6 +145,11 @@ h1, h2, h3, h4 {
     text-decoration: none;
     font-weight: bold;
     border-bottom: 2px solid #c9856b;
+    transition: color 0.25s, border-color 0.25s;
+}
+.button-link:hover {
+    color: #b07258;
+    border-color: #b07258;
 }
 .about-image {
     flex: 1;
@@ -169,6 +198,11 @@ footer a:hover {
     font-size: 18px;
     margin-right: 14px;
     color: #d4c5b9;
+    transition: color 0.25s, transform 0.25s;
+}
+.social-icons a:hover {
+    color: #e8b09a;
+    transform: translateY(-3px);
 }
 .copyright-text {
     text-align: center;

@@ -204,9 +204,17 @@ footer p, footer a {
     margin: 4px 0;
     text-decoration: none;
 }
+.social-icons {
+    margin-top: 10px;
+}
 .social-icons a {
+    display: inline-block;
     font-size: 18px;
     margin-right: 14px;
+    color: #d4c5b9;
+}
+footer a:hover {
+    color: #e8b09a;
 }
 .copyright-text {
     text-align: center;
