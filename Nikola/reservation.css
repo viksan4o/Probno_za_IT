@@ -1,0 +1,107 @@
+.reservation-container {
+    padding: 60px 20px;
+    background: #e8dccb;
+    display: flex;
+    justify-content: center;
+}
+
+.reservation-card {
+    background: white;
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.reservation-image {
+    background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(58, 36, 24, 0.8));
+    color: white;
+}
+
+.overlay-text h3 { color: white; margin-bottom: 5px; }
+
+.reservation-form {
+    padding: 40px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #7a6a5a;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    padding: 12px;
+    border: 1px solid #e0d3c0;
+    border-radius: 8px;
+    font-family: inherit;
+    background: #fafafa;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.submit-res-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    background: #c9856b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-res-btn:hover {
+    background: #a86c52;
+    transform: translateY(-2px);
+}
+
+.form-message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+}
+
+.success { color: #2d6a4f; display: block; }
+
+@media (max-width: 768px) {
+    .reservation-card { grid-template-columns: 1fr; }
+    .reservation-image { height: 200px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .full-width { grid-column: span 1; }
+}
