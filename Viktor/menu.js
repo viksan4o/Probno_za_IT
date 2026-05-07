@@ -6,7 +6,7 @@ const products = [
       description: "Свеж чийзкейк с домашен сос от горски плодове.",
       image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500" },
     { id: 3, name: "Веган брауни", category: "deserti", type: "vegan", price: 7,
-      description: "Богато брауни без животински продукти.",
+      description: "Шоколадово брауни без животински продукти.",
       image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500" },
     { id: 4, name: "Тарт с лимон", category: "deserti", type: "sladko", price: 8,
       description: "Хрупкава кора с лимонов крем.",

@@ -31,6 +31,7 @@ h1, h2, h3, h4 {
     text-decoration: none;
     margin: 0 14px;
     font-size: 16px;
+    font-weight: 400;
 }
 .site-header nav a:hover {
     color: #c9856b;

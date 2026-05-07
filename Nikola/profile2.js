@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedEmail = localStorage.getItem('profileEmail');
     const savedPhone = localStorage.getItem('profilePhone');
 
-    // Ако има записано име, променяме поздрава на "Здравей, [Име]!"
     if (savedName) {
         displayName.textContent = `Здравей, ${savedName.split(' ')[0]}!`; 
         nameInput.value = savedName;
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Функция за смяна на табовете (Данни / Поръчки)
-function showTab(tabName) {
+function showTab(tabName, event) {
     // Скриваме всички табове
     document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
@@ -64,5 +63,7 @@ function showTab(tabName) {
 
     // Показваме текущия
     document.getElementById(tabName + '-tab').classList.add('active');
-    event.currentTarget.classList.add('active');
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+    }
 }
