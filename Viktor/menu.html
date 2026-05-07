@@ -9,60 +9,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="site-header">
-        <div class="site-logo">Камист</div>
+    <header class="navbar">
+        <div class="brand">Камист</div>
         <nav>
             <a href="index.html">Начало</a>
             <a href="../Kostadin/about.html">За нас</a>
-            <a href="menu.html" class="current-page">Меню</a>
+            <a href="menu.html" class="active">Меню</a>
             <a href="../Kostadin/custom-cakes.html">Торти по поръчка</a>
             <a href="../Nikola/reservation.html">Резервации</a>
             <a href="../Georgi/contact.html">Контакти</a>
-            <a href="../cart.html" class="icon-link" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="../Nikola/profile.html" class="icon-link" title="Профил"><i class="fa-solid fa-user"></i></a>
+            <a href="../cart.html" class="nav-icon" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="../Nikola/profile.html" class="nav-icon" title="Профил"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
     <main>
-        <section class="intro-section">
-            <h1 class="page-title">Нашето <span class="italic-accent">меню</span></h1>
-            <p class="page-subtitle">Подбрани десерти и напитки, приготвени с грижа и качествени съставки.</p>
+        <section class="menu-head">
+            <h1 class="heading">Нашето <span class="accent">меню</span></h1>
+            <p class="subhead">Подбрани десерти и напитки, приготвени с грижа и качествени съставки.</p>
         </section>
-        <section class="menu-section">
-            <div class="page-container">
-                <div class="filters">
-                    <div class="filter-group">
-                        <label for="categoryFilter">Категория</label>
-                        <select id="categoryFilter">
+        <section class="menu-body">
+            <div class="wrap">
+                <div class="filter-bar">
+                    <div class="filter">
+                        <label for="catSelect">Категория</label>
+                        <select id="catSelect">
                             <option value="all">Всички</option>
                             <option value="torti">Торти</option>
                             <option value="deserti">Десерти</option>
                             <option value="napitki">Напитки</option>
                         </select>
                     </div>
-                    <div class="filter-group">
-                        <label for="typeFilter">Тип</label>
-                        <select id="typeFilter">
+                    <div class="filter">
+                        <label for="typeSelect">Тип</label>
+                        <select id="typeSelect">
                             <option value="all">Всички</option>
                             <option value="sladko">Сладко</option>
                             <option value="vegan">Веган</option>
                         </select>
                     </div>
-                    <div class="filter-group">
-                        <label for="searchInput">Търсене</label>
-                        <input type="text" id="searchInput" placeholder="Търси десерт...">
+                    <div class="filter">
+                        <label for="searchBox">Търсене</label>
+                        <input type="text" id="searchBox" placeholder="Търси десерт...">
                     </div>
                 </div>
-                <div id="productsGrid" class="products-grid"></div>
-                <p id="noResults" class="no-results" style="display:none;">Няма продукти, които да отговарят на филтрите.</p>
+                <div id="menuGrid" class="grid"></div>
+                <p id="emptyState" class="empty-msg" style="display:none;">Няма продукти, които да отговарят на филтрите.</p>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-columns">
+        <div class="footer-grid">
             <div>
                 <h4>Камист</h4>
                 <p>Сладки моменти от 2010.</p>
-                <div class="social-icons">
+                <div class="socials">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
@@ -89,9 +89,9 @@
                 <p>kamistsweets@gmail.com</p>
             </div>
         </div>
-        <p class="copyright-text">© 2026 Камист.</p>
+        <p class="copyright">© 2026 Камист.</p>
     </footer>
-    <button id="scrollTop" title="Нагоре"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="to-top" title="Нагоре"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="menu.js"></script>
 </body>
 </html>

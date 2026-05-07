@@ -4,6 +4,7 @@
 body {
     background: #f2e8db;
     font-family: 'Inter', sans-serif;
+    font-size: 17px;
     color: #4a3528;
     line-height: 1.7;
 }
@@ -19,9 +20,9 @@ h1, h2, h3, h4 {
     background: #f2e8db;
 }
 .site-logo {
-    font-family: Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .site-logo span, .button-link, .feature-card h3, footer h4 span {
     color: #c9856b;
@@ -54,7 +55,7 @@ h1, h2, h3, h4 {
 }
 .page-title {
     font-family: 'Playfair Display', serif;
-    font-size: 34px;
+    font-size: 40px;
     color: #3a2418;
     max-width: 800px;
     margin: 0 auto;
