@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.order-button');
 
     buttons.forEach(button => {

@@ -1,3 +1,27 @@
+﻿.intro-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #3a2418;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+.italic-accent {
+    font-style: italic;
+    color: #c9856b;
+}
+.page-subtitle {
+    color: #4a3528;
+    margin: 18px auto 0;
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
 .reservation-container {
     padding: 60px 20px;
     background: #e8dccb;
