@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резервации</title>
-    <link rel="stylesheet" href="../Viktor/style_index.css">
+    <title>Резервации - Камист</title>
+    <link rel="stylesheet" href="../Viktor/index.css">
     <link rel="stylesheet" href="reservation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,66 +23,69 @@
             <a href="profile.html" class="icon-link" title="Профил"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
+
     <main>
+        <section class="intro-section">
+            <h1 class="page-title">Резервирайте <span class="italic-accent">Вашия момент</span></h1>
+            <p class="page-subtitle">Запазете маса за споделено кафе с приятели или семеен празник в сърцето на София.</p>
+        </section>
+
         <section class="reservation-container">
             <div class="reservation-card">
                 <div class="reservation-image">
                     <div class="overlay-text">
-                        <h3>Резервирай маса</h3>
-                        <p>Най-добрите десерти и уютна атмосфера за твоя специален момент.</p>
+                        <h3>Заповядайте при нас</h3>
+                        <p>ул. Витоша 15, София</p>
                     </div>
                 </div>
-                <div class="reservation-form">
-                    <h2>Форма за резервация</h2>
-                    <form id="reservationForm">
-                        <div class="form-grid">
-                            <div class="input-group">
-                                <label for="res-name">Име</label>
-                                <input type="text" id="res-name" name="name" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="res-email">Имейл</label>
-                                <input type="email" id="res-email" name="email" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="res-phone">Телефон</label>
-                                <input type="tel" id="res-phone" name="phone" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="res-date">Дата</label>
-                                <input type="date" id="res-date" name="date" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="res-time">Час</label>
-                                <input type="time" id="res-time" name="time" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="res-guests">Брой гости</label>
-                                <select id="res-guests" name="guests" required>
-                                    <option value="">Изберете</option>
-                                    <option value="2">2 души</option>
-                                    <option value="4">4 души</option>
-                                    <option value="6">6 души</option>
-                                    <option value="8">8 души</option>
-                                </select>
-                            </div>
-                            <div class="input-group full-width">
-                                <label for="res-notes">Бележки</label>
-                                <textarea id="res-notes" name="notes" rows="4" placeholder="Специални изисквания"></textarea>
-                            </div>
+                
+                <form id="reservationForm" class="reservation-form">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="res-name">Име и фамилия</label>
+                            <input type="text" id="res-name" required placeholder="Вашето име...">
                         </div>
-                        <button type="submit" class="submit-res-btn">Резервирай сега</button>
-                        <p id="formMessage" class="form-message"></p>
-                    </form>
-                </div>
+                        <div class="input-group">
+                            <label for="res-phone">Телефон за връзка</label>
+                            <input type="tel" id="res-phone" required placeholder="0888 123 456">
+                        </div>
+                        <div class="input-group">
+                            <label for="res-date">Дата</label>
+                            <input type="date" id="res-date" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="res-time">Час</label>
+                            <select id="res-time" required>
+                                <option value="" disabled selected>Изберете час</option>
+                                <option value="09:00">09:00 ч.</option>
+                                <option value="11:00">11:00 ч.</option>
+                                <option value="13:00">13:00 ч.</option>
+                                <option value="15:00">15:00 ч.</option>
+                                <option value="17:00">17:00 ч.</option>
+                                <option value="19:00">19:00 ч.</option>
+                            </select>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="res-guests">Брой гости</label>
+                            <input type="number" id="res-guests" min="1" max="10" value="2">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="res-note">Специални изисквания (незадължително)</label>
+                            <textarea id="res-note" rows="3" placeholder="Напр. маса до прозореца..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-res-btn">Резервирай сега</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-columns">
             <div>
                 <h4>Камист</h4>
-                <p>Сладки моменти от 2000.</p>
+                <p>Сладки моменти от 2010.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -107,11 +110,12 @@
                 <h5>Контакти</h5>
                 <p>ул. Витоша 15, София</p>
                 <p>+359 888 123 456</p>
-                <p>nyakakuvmail@kamist.bg</p>
+                <p>kamistsweets@gmail.com</p>
             </div>
         </div>
         <p class="copyright-text">© 2026 Камист.</p>
     </footer>
+
     <script src="reservation.js"></script>
 </body>
 </html>

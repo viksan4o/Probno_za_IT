@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     cakeOrderForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const requiredFields = cakeOrderForm.querySelectorAll("[required]");
-        
         let Valid = true;
         requiredFields.forEach(field => {
             if (!field.value) {
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 field.classList.remove("error");
             }
         });
-
         if (Valid) {
             formMessage.classList.remove("hidden", "error");
             formMessage.classList.add("success");

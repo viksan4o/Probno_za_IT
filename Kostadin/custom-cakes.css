@@ -1,9 +1,14 @@
-* {
+﻿﻿* {
     box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+}
 body {
-    background: #f2e8db;
+    background: #faebd6;
     font-family: 'Inter', sans-serif;
+    font-size: 17px;
     color: #4a3528;
     line-height: 1.7;
 }
@@ -19,9 +24,9 @@ h1, h2, h3, h4 {
     background: #f2e8db;
 }
 .site-logo {
-    font-family: Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .site-logo span, .button-link, .feature-card h3, footer h4 span {
     color: #c9856b;
@@ -31,13 +36,12 @@ h1, h2, h3, h4 {
     text-decoration: none;
     margin: 0 14px;
     font-size: 16px;
-    font-weight: 400;
 }
-.site-header nav a:hover {
+.site-header nav a:hover,
+.site-header nav a.current-page {
     color: #c9856b;
 }
 .site-header nav a.current-page {
-    color: #c9856b;
     font-weight: 600;
 }
 .icon-link {
@@ -55,7 +59,7 @@ h1, h2, h3, h4 {
 }
 .page-title {
     font-family: 'Playfair Display', serif;
-    font-size: 34px;
+    font-size: 40px;
     color: #3a2418;
     max-width: 800px;
     margin: 0 auto;

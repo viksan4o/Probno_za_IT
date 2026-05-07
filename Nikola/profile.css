@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    font-size: 17px;
     background-color: #e8dccb;
     color: #4a3528;
     line-height: 1.6;
@@ -14,9 +15,9 @@ body {
     background: #f2e8db;
 }
 .site-logo {
-    font-family: Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .site-logo span {
     color: #c9856b;
@@ -87,7 +88,6 @@ footer a:hover {
     font-size: 12px;
     color: #a0907f;
 }
-
 .profile-container {
     max-width: 1100px;
     margin: 40px auto;
@@ -97,8 +97,6 @@ footer a:hover {
     padding: 0 20px;
     min-height: 60vh;
 }
-
-/* Sidebar */
 .profile-sidebar {
     background: #fff;
     padding: 30px;
@@ -106,25 +104,21 @@ footer a:hover {
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
 .user-avatar i {
     font-size: 80px;
     color: #c9856b;
     margin-bottom: 15px;
 }
-
 .user-avatar h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 5px;
 }
-
 .profile-nav {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .nav-btn {
     background: none;
     border: none;
@@ -136,43 +130,34 @@ footer a:hover {
     border-radius: 6px;
     transition: 0.3s;
 }
-
 .nav-btn.active, .nav-btn:hover {
     background: #faebd6;
     color: #c9856b;
 }
-
 .logout {
     margin-top: 20px;
     color: #a34b4b;
 }
-
-/* Content Area */
 .profile-content {
     background: #fff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
 .tab-content {
     display: none;
 }
-
 .tab-content.active {
     display: block;
 }
-
 .input-group {
     margin-bottom: 20px;
 }
-
 .input-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
 }
-
 .input-group input {
     width: 100%;
     padding: 12px;
@@ -180,7 +165,6 @@ footer a:hover {
     border-radius: 6px;
     box-sizing: border-box;
 }
-
 .save-btn {
     background: #c9856b;
     color: white;
@@ -190,29 +174,23 @@ footer a:hover {
     cursor: pointer;
     font-weight: 600;
 }
-
-/* Orders Table */
 .orders-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
-
 .orders-table th, .orders-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #f2e8db;
 }
-
 .status {
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 12px;
 }
-
 .status.delivered { background: #d4edda; color: #155724; }
 .status.pending { background: #fff3cd; color: #856404; }
-
 @media (max-width: 768px) {
     .profile-container { grid-template-columns: 1fr; }
 }

@@ -25,42 +25,47 @@
 
     <section class="intro-section">
         <h1 class="page-title">Свържи се с нас</h1>
+        <p class="page-subtitle">Имате въпрос или идея? Пишете ни — отговаряме до 24 часа.</p>
     </section>
 
     <section class="contact-section">
         <div class="page-container">
-            <div id="status" class="status"></div>
-
             <div class="contact-details">
                 <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
                     <h3>Адрес</h3>
                     <p>ул. Витоша 15, София</p>
                 </div>
                 <div class="info-card">
+                    <i class="fa-solid fa-phone"></i>
                     <h3>Телефон</h3>
                     <p><a href="tel:+359888123456">+359 888 123 456</a></p>
                 </div>
                 <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
                     <h3>Имейл</h3>
-                    <p><a href="mailto:nyakakuvmail@kamist.bg">nyakakuvmail@kamist.bg</a></p>
+                    <p><a href="mailto:kamistsweets@gmail.com">kamistsweets@gmail.com</a></p>
                 </div>
             </div>
 
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps?q=Sofia%20Vitosha%2015&output=embed"
-                    loading="lazy"></iframe>
-            </div>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Изпратете съобщение</h2>
+                    <div id="status" class="status"></div>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Вашето име" required>
+                        <input type="email" placeholder="Вашият имейл" required>
+                        <textarea placeholder="Напишете вашето съобщение..." required></textarea>
+                        <button type="submit">Изпрати съобщение</button>
+                    </form>
+                    <p id="message" class="message"></p>
+                </div>
 
-            <div class="contact-form">
-                <form id="contactForm">
-                    <input type="text" placeholder="Вашето име" required>
-                    <input type="email" placeholder="Вашият имейл" required>
-                    <textarea placeholder="Напишете вашето съобщение..." required></textarea>
-                    <button type="submit">Изпрати съобщение</button>
-                </form>
-
-                <p id="message" class="message"></p>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Sofia%20Vitosha%2015&output=embed"
+                        loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -69,7 +74,7 @@
         <div class="footer-columns">
             <div>
                 <h4>Камист</h4>
-                <p>Сладки моменти от 2000.</p>
+                <p>Сладки моменти от 2010.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -94,7 +99,7 @@
                 <h5>Контакти</h5>
                 <p>ул. Витоша 15, София</p>
                 <p>+359 888 123 456</p>
-                <p>nyakakuvmail@kamist.bg</p>
+                <p>kamistsweets@gmail.com</p>
             </div>
         </div>
         <p class="copyright-text">© 2026 Камист.</p>

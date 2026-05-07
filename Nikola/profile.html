@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профил</title>
-    <link rel="stylesheet" href="../Viktor/style_index.css">
+    <title>Моят Профил - Камист</title>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,71 +22,76 @@
             <a href="profile.html" class="icon-link current-page" title="Профил"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
-    <main>
-        <section class="profile-container">
-            <aside class="profile-sidebar">
-                <div class="user-avatar">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h2 id="display-name">Здравей!</h2>
-                    <p>Твоят профил в Камист</p>
-                </div>
-                <div class="profile-nav">
-                    <button class="nav-btn active" onclick="showTab('details', event)">Данни</button>
-                    <button class="nav-btn" onclick="showTab('orders', event)">Поръчки</button>
-                    <button class="logout">Изход</button>
-                </div>
-            </aside>
-            <section class="profile-content">
-                <div id="details-tab" class="tab-content active">
-                    <h2>Лични данни</h2>
-                    <form id="profile-form">
-                        <div class="input-group">
-                            <label for="user-name">Име</label>
-                            <input type="text" id="user-name" name="name" placeholder="Въведи име" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="user-email">Имейл</label>
-                            <input type="email" id="user-email" name="email" placeholder="Въведи имейл" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="user-phone">Телефон</label>
-                            <input type="tel" id="user-phone" name="phone" placeholder="Въведи телефон" required>
-                        </div>
-                        <button class="save-btn" type="submit">Запази промените</button>
-                    </form>
-                </div>
-                <div id="orders-tab" class="tab-content">
-                    <h2>Последни поръчки</h2>
-                    <table class="orders-table">
-                        <thead>
-                            <tr>
-                                <th>Дата</th>
-                                <th>Поръчка</th>
-                                <th>Статус</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>03.05.2026</td>
-                                <td>Резервация за 4 души</td>
-                                <td><span class="status pending">В процес</span></td>
-                            </tr>
-                            <tr>
-                                <td>28.04.2026</td>
-                                <td>Торта по поръчка</td>
-                                <td><span class="status delivered">Завършена</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+
+    <main class="profile-container">
+        <section class="profile-sidebar">
+            <div class="user-avatar">
+                <i class="fa-solid fa-circle-user"></i>
+                <h2 id="display-name">Здравей!</h2>
+                <p>Лоялен клиент</p>
+            </div>
+            <nav class="profile-nav">
+                <button class="nav-btn active" onclick="showTab('info')"><i class="fa-solid fa-user-gear"></i> Данни</button>
+                <button class="nav-btn" onclick="showTab('orders')"><i class="fa-solid fa-bag-shopping"></i> Поръчки</button>
+                <button class="nav-btn logout"><i class="fa-solid fa-right-from-bracket"></i> Изход</button>
+            </nav>
+        </section>
+
+        <section class="profile-content">
+            <div id="info-tab" class="tab-content active">
+                <h3>Лични данни</h3>
+                <form id="profile-form">
+                    <div class="input-group">
+                        <label>Име</label>
+                        <input type="text" id="user-name" value="Калоян Георгиев">
+                    </div>
+                    <div class="input-group">
+                        <label>Имейл</label>
+                        <input type="email" id="user-email" value="kaloian@mail.bg">
+                    </div>
+                    <div class="input-group">
+                        <label>Телефон</label>
+                        <input type="text" id="user-phone" value="+359 888 111 222">
+                    </div>
+                    <button type="submit" class="save-btn">Запази промените</button>
+                </form>
+            </div>
+
+            <div id="orders-tab" class="tab-content">
+                <h3>История на поръчките</h3>
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Номер</th>
+                            <th>Дата</th>
+                            <th>Сума</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#4521</td>
+                            <td>12.04.2026</td>
+                            <td>45.50 лв.</td>
+                            <td><span class="status delivered">Доставена</span></td>
+                        </tr>
+                        <tr>
+                            <td>#4589</td>
+                            <td>02.05.2026</td>
+                            <td>22.10 лв.</td>
+                            <td><span class="status pending">Обработва се</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-columns">
             <div>
                 <h4>Камист</h4>
-                <p>Сладки моменти от 2000.</p>
+                <p>Сладки моменти от 2010.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -112,11 +116,11 @@
                 <h5>Контакти</h5>
                 <p>ул. Витоша 15, София</p>
                 <p>+359 888 123 456</p>
-                <p>nyakakuvmail@kamist.bg</p>
+                <p>kamistsweets@gmail.com</p>
             </div>
         </div>
         <p class="copyright-text">© 2026 Камист.</p>
     </footer>
-    <script src="profile2.js"></script>
+    <script src="profile.js"></script>
 </body>
 </html>

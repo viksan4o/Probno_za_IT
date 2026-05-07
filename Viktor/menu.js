@@ -6,7 +6,7 @@ const products = [
       description: "Свеж чийзкейк с домашен сос от горски плодове.",
       image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500" },
     { id: 3, name: "Веган брауни", category: "deserti", type: "vegan", price: 7,
-      description: "Шоколадово брауни без животински продукти.",
+      description: "Богато брауни без животински продукти.",
       image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500" },
     { id: 4, name: "Тарт с лимон", category: "deserti", type: "sladko", price: 8,
       description: "Хрупкава кора с лимонов крем.",
@@ -28,38 +28,38 @@ const products = [
       image: "https://images.unsplash.com/photo-1517578239113-b03992dcdd25?w=500" }
 ];
 const typeLabels = { sladko: "Сладко", vegan: "Веган" };
-const categoryFilter = document.getElementById('categoryFilter');
-const typeFilter = document.getElementById('typeFilter');
-const searchInput = document.getElementById('searchInput');
-const grid = document.getElementById('productsGrid');
-const noResults = document.getElementById('noResults');
+const catSelect = document.getElementById('catSelect');
+const typeSelect = document.getElementById('typeSelect');
+const searchBox = document.getElementById('searchBox');
+const grid = document.getElementById('menuGrid');
+const emptyState = document.getElementById('emptyState');
 function render() {
-    const cat = categoryFilter.value;
-    const type = typeFilter.value;
-    const search = searchInput.value.trim().toLowerCase();
+    const cat = catSelect.value;
+    const type = typeSelect.value;
+    const search = searchBox.value.trim().toLowerCase();
     const filtered = products.filter(p =>
         (cat === 'all' || p.category === cat) &&
         (type === 'all' || p.type === type) &&
         p.name.toLowerCase().includes(search)
     );
-    noResults.style.display = filtered.length ? 'none' : 'block';
+    emptyState.style.display = filtered.length ? 'none' : 'block';
     grid.innerHTML = filtered.map(p => `
-        <article class="product-card">
+        <article class="card">
             <img src="${p.image}" alt="${p.name}">
-            <div class="product-info">
-                <span class="product-tag">${typeLabels[p.type] || p.type}</span>
+            <div class="card-body">
+                <span class="tag">${typeLabels[p.type] || p.type}</span>
                 <h3>${p.name}</h3>
                 <p>${p.description}</p>
-                <div class="product-bottom">
-                    <span class="product-price">${p.price.toFixed(2)} лв</span>
-                    <button class="add-to-cart" data-id="${p.id}">Добави</button>
+                <div class="card-foot">
+                    <span class="price">${p.price.toFixed(2)} лв</span>
+                    <button class="buy-btn" data-id="${p.id}">Добави</button>
                 </div>
             </div>
         </article>
     `).join('');
 }
 grid.addEventListener('click', e => {
-    const btn = e.target.closest('.add-to-cart');
+    const btn = e.target.closest('.buy-btn');
     if (!btn) return;
     const id = +btn.dataset.id;
     const product = products.find(p => p.id === id);
@@ -71,10 +71,10 @@ grid.addEventListener('click', e => {
     btn.textContent = 'Добавено ✓';
     setTimeout(() => btn.textContent = 'Добави', 1000);
 });
-[categoryFilter, typeFilter, searchInput].forEach(el =>
+[catSelect, typeSelect, searchBox].forEach(el =>
     el.addEventListener('input', render));
 render();
-const topBtn = document.getElementById('scrollTop');
+const topBtn = document.getElementById('to-top');
 window.addEventListener('scroll', () =>
     topBtn.classList.toggle('show', window.scrollY > 300));
 topBtn.addEventListener('click', () =>

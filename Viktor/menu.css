@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    font-size: 17px;
     background: #faebd6;
     color: #4a3528;
     line-height: 1.7;
@@ -17,9 +18,9 @@ h1, h2, h3, h4 {
     background: #f2e8db;
 }
 .site-logo {
-    font-family: Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .site-header nav a {
     color: #4a3528;
@@ -33,38 +34,41 @@ h1, h2, h3, h4 {
 .site-header nav a.current-page {
     font-weight: 600;
 }
-.intro-section {
+.icon-link {
+    font-size: 20px;
+}
+.menu-head {
     text-align: center;
     padding: 60px 20px;
 }
-.page-title {
+.heading {
     font-family: 'Playfair Display', serif;
-    font-size: 34px;
+    font-size: 40px;
     color: #3a2418;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.4;
 }
-.italic-accent {
+.accent {
     font-style: italic;
     color: #c9856b;
 }
-.page-subtitle {
+.subhead {
     color: #4a3528;
     margin: 18px auto 0;
     max-width: 760px;
     font-size: 17px;
     line-height: 1.75;
 }
-.menu-section {
+.menu-body {
     padding: 60px 20px;
     background: #e8dccb;
 }
-.page-container {
+.wrap {
     max-width: 1100px;
     margin: 0 auto;
 }
-.filters {
+.filter-bar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -73,14 +77,14 @@ h1, h2, h3, h4 {
     border-radius: 12px;
     margin-bottom: 40px;
 }
-.filter-group label {
+.filter label {
     display: block;
     font-size: 13px;
     color: #7a6a5a;
     margin-bottom: 6px;
 }
-.filter-group select,
-.filter-group input {
+.filter select,
+.filter input {
     width: 100%;
     height: 42px;
     padding: 0 12px;
@@ -92,12 +96,12 @@ h1, h2, h3, h4 {
     color: #4a3528;
     box-sizing: border-box;
 }
-.products-grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 25px;
 }
-.product-card {
+.card {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -105,21 +109,21 @@ h1, h2, h3, h4 {
     flex-direction: column;
     transition: transform 0.3s;
 }
-.product-card:hover {
+.card:hover {
     transform: translateY(-5px);
 }
-.product-card img {
+.card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-.product-info {
+.card-body {
     padding: 18px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
-.product-tag {
+.tag {
     align-self: flex-start;
     font-size: 11px;
     color: #c9856b;
@@ -127,25 +131,25 @@ h1, h2, h3, h4 {
     padding: 3px 10px;
     border-radius: 20px;
 }
-.product-info h3 {
+.card-body h3 {
     font-size: 20px;
     margin: 8px 0 6px;
 }
-.product-info p {
+.card-body p {
     font-size: 14px;
     color: #7a6a5a;
     margin-bottom: 15px;
     flex: 1;
 }
-.product-bottom {
+.card-foot {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.product-price {
+.price {
     font-weight: 600;
 }
-.add-to-cart {
+.buy-btn {
     background: #c9856b;
     color: #fff;
     border: none;
@@ -153,12 +157,12 @@ h1, h2, h3, h4 {
     border-radius: 20px;
     cursor: pointer;
 }
-.no-results {
+.empty-msg {
     text-align: center;
     padding: 40px;
     color: #7a6a5a;
 }
-#scrollTop {
+#to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -171,7 +175,7 @@ h1, h2, h3, h4 {
     cursor: pointer;
     display: none;
 }
-#scrollTop.show {
+#to-top.show {
     display: block;
 }
 footer {
@@ -179,7 +183,7 @@ footer {
     color: #d4c5b9;
     padding: 45px 60px 20px;
 }
-.footer-columns {
+.footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
     gap: 40px;
@@ -197,26 +201,27 @@ footer h5 {
     font-size: 14px;
     margin-bottom: 12px;
 }
-footer p, footer a {
+footer p,
+footer a {
     display: block;
     color: #d4c5b9;
     font-size: 14px;
     margin: 4px 0;
     text-decoration: none;
 }
-.social-icons {
+footer a:hover {
+    color: #e8b09a;
+}
+.socials {
     margin-top: 10px;
 }
-.social-icons a {
+.socials a {
     display: inline-block;
     font-size: 18px;
     margin-right: 14px;
     color: #d4c5b9;
 }
-footer a:hover {
-    color: #e8b09a;
-}
-.copyright-text {
+.copyright {
     text-align: center;
     font-size: 12px;
     color: #a0907f;

@@ -1,6 +1,7 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+﻿* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Inter', sans-serif;
+    font-size: 17px;
     background: #faebd6;
     color: #4a3528;
     line-height: 1.7;
@@ -17,7 +18,7 @@ h1, h2, h3, h4 {
     padding: 20px 60px;
     background: #f2e8db;
 }
-.site-logo { font-family: Georgia, serif; font-size: 26px; font-weight: bold; }
+.site-logo { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; }
 .site-header nav a {
     color: #4a3528;
     text-decoration: none;
@@ -137,7 +138,3 @@ footer a:hover { color: #e8b09a; }
 .social-icons { margin-top: 10px; }
 .social-icons a { display: inline-block; font-size: 18px; margin-right: 14px; color: #d4c5b9; }
 .copyright-text { text-align: center; font-size: 12px; color: #a0907f; }
-
-@media (max-width: 850px) {
-    .contact-details, .contact-grid { grid-template-columns: 1fr; }
-}
