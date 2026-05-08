@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
 .hero-photo {
     flex: 1;
     height: 420px;
-    background: url('https://images.unsplash.com/photo-1558024920-b41e1887dc32?w=800') center/cover;
+    background: url('images/index/cake for home page.jpg') center/cover;
     border-radius: 10px;
 }
 .highlights {
