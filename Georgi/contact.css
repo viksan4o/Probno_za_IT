@@ -138,7 +138,3 @@ footer a:hover { color: #e8b09a; }
 .social-icons { margin-top: 10px; }
 .social-icons a { display: inline-block; font-size: 18px; margin-right: 14px; color: #d4c5b9; }
 .copyright-text { text-align: center; font-size: 12px; color: #a0907f; }
-
-@media (max-width: 850px) {
-    .contact-details, .contact-grid { grid-template-columns: 1fr; }
-}

@@ -10,29 +10,29 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     color: #3a2418;
 }
-.navbar {
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
     background: #f2e8db;
 }
-.brand {
+.site-logo {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
     font-weight: 700;
 }
-.navbar nav a {
+.site-header nav a {
     color: #4a3528;
     text-decoration: none;
     margin: 0 14px;
     font-size: 16px;
 }
-.navbar nav a:hover,
-.navbar nav a.active {
+.site-header nav a:hover,
+.site-header nav a.current-page {
     color: #c9856b;
 }
-.navbar nav a.active {
+.site-header nav a.current-page {
     font-weight: 600;
 }
 .nav-icon {
