@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your Cart — La Farine Bakery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --cream:     #faf6ef;
+    --parchment: #f0e8d8;
+    --warm-mid:  #e2d0b4;
+    --caramel:   #b8722a;
+    --caramel-lt:#d4914a;
+    --espresso:  #241409;
+    --bark:      #3d2010;
+    --rust:      #963318;
+    --sage:      #6b8060;
+    --muted:     #8a7560;
+    --shadow-sm: 0 2px 12px rgba(36,20,9,0.08);
+    --shadow-md: 0 8px 40px rgba(36,20,9,0.13);
+    --shadow-lg: 0 20px 60px rgba(36,20,9,0.18);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--espresso);
+    min-height: 100vh;
+  }
+
+  /* ── grain texture ── */
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+    opacity: 1;
+  }
+
+  /* ── header ── */
+  header {
+    position: relative; z-index: 10;
+    background: var(--espresso);
+    padding: 0 56px;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 300;
+    color: var(--parchment);
+    letter-spacing: .18em; text-transform: uppercase;
+  }
+  .brand em {
+    font-style: italic; font-weight: 400;
+    color: var(--caramel-lt);
+  }
+
+  .header-right {
+    display: flex; align-items: center; gap: 32px;
+  }
+  .back-link {
+    color: rgba(240,232,216,.55); text-decoration: none;
+    font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    transition: color .2s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .back-link:hover { color: var(--parchment); }
+  .back-link svg { transition: transform .2s; }
+  .back-link:hover svg { transform: translateX(-3px); }
+
+  .cart-badge {
+    background: var(--caramel);
+    color: #fff;
+    font-size: .7rem; font-weight: 500;
+    letter-spacing: .06em;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  /* ── main layout ── */
+  main {
+    position: relative; z-index: 1;
+    max-width: 960px; margin: 0 auto;
+    padding: 64px 32px 100px;
+  }
+
+  /* ── page heading ── */
+  .page-head {
+    margin-bottom: 48px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--warm-mid);
+    padding-bottom: 28px;
+  }
+  .page-head-left {}
+  .page-eyebrow {
+    font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--caramel); margin-bottom: 8px;
+    font-weight: 500;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem; font-weight: 300; line-height: 1;
+    letter-spacing: -.01em;
+  }
+  h1 em { font-style: italic; color: var(--caramel); }
+
+  /* ── cart items ── */
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cart-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--parchment);
+    animation: fadeUp .3s ease both;
+    transition: background .15s;
+  }
+  .cart-item:first-child { border-top: 1px solid var(--parchment); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .item-info {}
+  .item-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .item-meta {
+    font-size: .76rem; color: var(--muted);
+    letter-spacing: .04em;
+  }
+  .item-meta .dot { margin: 0 6px; opacity: .5; }
+
+  /* ── qty stepper ── */
+  .qty-wrap {
+    display: flex; align-items: center; gap: 0;
+    border: 1px solid var(--warm-mid);
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .qty-btn {
+    background: transparent; border: none; cursor: pointer;
+    width: 34px; height: 34px;
+    font-size: .95rem; font-weight: 300;
+    color: var(--muted);
+    transition: background .15s, color .15s;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1;
+  }
+  .qty-btn:hover { background: var(--parchment); color: var(--espresso); }
+  .qty-val {
+    width: 36px; text-align: center;
+    font-size: .88rem; font-weight: 500;
+    border: none; outline: none;
+    background: transparent;
+    color: var(--espresso);
+    border-left: 1px solid var(--warm-mid);
+    border-right: 1px solid var(--warm-mid);
+    padding: 0; height: 34px;
+  }
+  .qty-val::-webkit-inner-spin-button,
+  .qty-val::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+  /* ── line price ── */
+  .item-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; font-weight: 600;
+    min-width: 64px; text-align: right;
+    letter-spacing: .01em;
+  }
+
+  /* ── remove ── */
+  .remove-btn {
+    background: none; border: none; cursor: pointer;
+    color: var(--warm-mid);
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    transition: background .15s, color .2s;
+    font-size: .8rem;
+  }
+  .remove-btn:hover { background: #fee; color: var(--rust); }
+  .remove-btn svg { pointer-events: none; }
+
+  /* ── empty state ── */
+  .empty-state {
+    text-align: center; padding: 80px 24px;
+  }
+  .empty-icon {
+    font-size: 3rem; margin-bottom: 20px;
+    opacity: .6;
+  }
+  .empty-state h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300; font-style: italic;
+    color: var(--muted); margin-bottom: 24px;
+  }
+
+  /* ── two-column cart layout ── */
+  .cart-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    align-items: start;
+  }
+  .cart-col-left {}
+  .cart-col-right {
+    position: sticky;
+    top: 32px;
+  }
+
+  /* ── order summary ── */
+  .order-summary {
+    margin-top: 0;
+  }
+  .summary-box {
+    background: var(--espresso);
+    color: var(--parchment);
+    border-radius: 4px;
+    padding: 28px 28px;
+    box-shadow: var(--shadow-lg);
+  }
+  .summary-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: .75rem; font-weight: 400;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: rgba(240,232,216,.45);
+    margin-bottom: 24px;
+  }
+  .summary-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 14px;
+    font-size: .84rem;
+  }
+  .summary-row-label {
+    color: rgba(240,232,216,.6);
+    font-weight: 300; letter-spacing: .04em;
+  }
+  .summary-row-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 400;
+  }
+  .summary-row-value.free {
+    color: var(--sage); font-size: .85rem;
+    font-family: 'DM Sans', sans-serif; font-weight: 500;
+    letter-spacing: .06em; font-size: .72rem; text-transform: uppercase;
+  }
+  .summary-divider {
+    border: none; border-top: 1px solid rgba(240,232,216,.15);
+    margin: 20px 0;
+  }
+  .summary-total-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .summary-total-label {
+    font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    color: rgba(240,232,216,.5);
+  }
+  .summary-total-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 600;
+    color: var(--caramel-lt);
+    letter-spacing: -.01em;
+  }
+  .free-delivery-note {
+    font-size: .7rem; color: rgba(240,232,216,.35);
+    margin-top: 10px; text-align: right;
+    letter-spacing: .04em;
+  }
+  .free-delivery-note span { color: var(--sage); }
+
+  /* ── checkout button ── */
+  .btn-checkout {
+    display: block; width: 100%;
+    margin-top: 28px;
+    padding: 16px 24px;
+    background: var(--caramel);
+    color: #fff;
+    border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .8rem; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase;
+    border-radius: 3px;
+    text-align: center; text-decoration: none;
+    transition: background .2s, transform .15s, box-shadow .2s;
+    box-shadow: 0 4px 16px rgba(184,114,42,.35);
+  }
+  .btn-checkout:hover {
+    background: var(--caramel-lt);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(184,114,42,.45);
+  }
+  .btn-checkout:active { transform: translateY(0); }
+
+  /* ── action bar ── */
+  .action-bar {
+    margin-top: 16px;
+    display: flex; justify-content: flex-end;
+  }
+  .btn-ghost {
+    background: none; border: 1px solid var(--warm-mid);
+    cursor: pointer; color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: .72rem; font-weight: 500;
+    letter-spacing: .12em; text-transform: uppercase;
+    padding: 10px 20px; border-radius: 3px;
+    transition: all .2s;
+    text-decoration: none;
+  }
+  .btn-ghost:hover { border-color: var(--rust); color: var(--rust); background: #fff5f3; }
+
+  /* ── demo panel ── */
+  .demo-panel {
+    margin-top: 64px;
+    position: relative;
+  }
+  .demo-panel::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--warm-mid), transparent);
+  }
+  .demo-head {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 32px; margin-bottom: 20px;
+  }
+  .demo-head-label {
+    font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); font-weight: 500;
+  }
+  .demo-head-line {
+    flex: 1; height: 1px; background: var(--parchment);
+  }
+  .demo-products {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .demo-add {
+    padding: 9px 16px;
+    background: #fff;
+    border: 1px solid var(--warm-mid);
+    border-radius: 3px; cursor: pointer;
+    color: var(--espresso);
+    font-family: 'DM Sans', sans-serif;
+    font-size: .76rem; font-weight: 400;
+    letter-spacing: .02em;
+    transition: all .15s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .demo-add:hover {
+    border-color: var(--caramel);
+    background: var(--cream);
+    color: var(--caramel);
+  }
+  .demo-add-plus {
+    color: var(--caramel); font-weight: 500; font-size: .9rem;
+  }
+  .demo-add-price {
+    color: var(--muted); font-size: .72rem; margin-left: 2px;
+  }
+
+  /* ── toast ── */
+  .toast {
+    position: fixed; bottom: 36px; left: 50%;
+    transform: translateX(-50%) translateY(16px);
+    background: var(--bark); color: var(--parchment);
+    padding: 12px 22px; border-radius: 3px;
+    font-size: .8rem; letter-spacing: .06em;
+    opacity: 0; transition: opacity .25s, transform .25s;
+    pointer-events: none; z-index: 999;
+    white-space: nowrap;
+    box-shadow: var(--shadow-md);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── responsive ── */
+  @media (max-width: 720px) {
+    header { padding: 0 20px; }
+    main { padding: 40px 20px 80px; }
+    h1 { font-size: 2.4rem; }
+    .cart-layout { grid-template-columns: 1fr; gap: 32px; }
+    .cart-col-right { position: static; }
+    .item-price { display: none; }
+    .page-head { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><em>La</em> Farine</div>
+  <div class="header-right">
+    <div class="cart-badge" id="cartBadge" style="display:none">Your Cart</div>
+    <a href="#" class="back-link">
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M13 5H1M5 1L1 5L5 9"/>
+      </svg>
+      Continue Shopping
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="page-head-left">
+      <div class="page-eyebrow">La Farine Bakery</div>
+      <h1>Your <em>Cart</em></h1>
+    </div>
+  </div>
+
+  <div id="emptyState" style="display:none">
+    <div class="empty-state">
+      <div class="empty-icon">🛒</div>
+      <h3>Your cart is empty</h3>
+      <a href="#" class="btn-checkout" style="display:inline-block;width:auto;padding:14px 36px">Browse the Bakery</a>
+    </div>
+  </div>
+
+  <div class="cart-layout" id="cartLayout" style="display:none">
+    <div class="cart-col-left">
+      <div id="cartItems"></div>
+      <div class="action-bar" id="actionBar">
+        <button class="btn-ghost" id="clearBtn">Remove all items</button>
+      </div>
+    </div>
+    <div class="cart-col-right">
+      <div id="orderSummary"></div>
+    </div>
+  </div>
+
+  <!-- Demo panel -->
+  <div class="demo-panel">
+    <div class="demo-head">
+      <span class="demo-head-label">Add items to test</span>
+      <div class="demo-head-line"></div>
+    </div>
+    <div class="demo-products" id="demoProducts"></div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CART_KEY = 'lafarine_cart_v2';
+
+const DEMO_PRODUCTS = [
+  { id: 'croissant',  name: 'Butter Croissant',        price: 3.50,  category: 'Viennoiserie' },
+  { id: 'sourdough',  name: 'Country Sourdough Loaf',  price: 8.90,  category: 'Breads' },
+  { id: 'eclair',     name: 'Chocolate Éclair',         price: 4.20,  category: 'Pastries' },
+  { id: 'cinnroll',   name: 'Cinnamon Roll',            price: 3.80,  category: 'Pastries' },
+  { id: 'tartlemon',  name: 'Lemon Tart (slice)',       price: 5.50,  category: 'Tarts' },
+  { id: 'baguette',   name: 'Traditional Baguette',     price: 2.60,  category: 'Breads' },
+  { id: 'painchoc',   name: 'Pain au Chocolat',         price: 3.70,  category: 'Viennoiserie' },
+  { id: 'macarons',   name: 'Macarons (box of 6)',      price: 14.00, category: 'Confections' },
+];
+
+function loadCart() {
+  try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch { return []; }
+}
+function saveCart(c) { localStorage.setItem(CART_KEY, JSON.stringify(c)); }
+function fmt(n) { return '€' + n.toFixed(2); }
+
+function addToCart(product) {
+  const cart = loadCart();
+  const existing = cart.find(i => i.id === product.id);
+  if (existing) existing.qty += 1;
+  else cart.push({ ...product, qty: 1 });
+  saveCart(cart);
+  renderCart();
+  showToast(product.name + ' added to cart');
+}
+function removeFromCart(id) { saveCart(loadCart().filter(i => i.id !== id)); renderCart(); }
+function updateQty(id, delta) {
+  const cart = loadCart();
+  const item = cart.find(i => i.id === id);
+  if (!item) return;
+  item.qty = Math.max(1, item.qty + delta);
+  saveCart(cart); renderCart();
+}
+function setQty(id, val) {
+  const n = parseInt(val, 10);
+  if (isNaN(n) || n < 1) return;
+  const cart = loadCart();
+  const item = cart.find(i => i.id === id);
+  if (item) { item.qty = n; saveCart(cart); renderCart(); }
+}
+function clearCart() { saveCart([]); renderCart(); }
+
+function renderCart() {
+  const cart       = loadCart();
+  const itemsEl    = document.getElementById('cartItems');
+  const summaryEl  = document.getElementById('orderSummary');
+  const actionBar  = document.getElementById('actionBar');
+  const cartLayout = document.getElementById('cartLayout');
+  const emptyState = document.getElementById('emptyState');
+  const badge      = document.getElementById('cartBadge');
+
+  const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+  badge.style.display = totalQty > 0 ? '' : 'none';
+
+  if (cart.length === 0) {
+    cartLayout.style.display = 'none';
+    emptyState.style.display = '';
+    return;
+  }
+
+  cartLayout.style.display = 'grid';
+  emptyState.style.display = 'none';
+
+  itemsEl.innerHTML = `<div class="cart-items">${
+    cart.map((item, i) => `
+      <div class="cart-item" style="animation-delay:${i * 0.04}s">
+        <div class="item-info">
+          <div class="item-name">${item.name}</div>
+          <div class="item-meta">${item.category}<span class="dot">·</span>${fmt(item.price)} each</div>
+        </div>
+        <div class="qty-wrap">
+          <button class="qty-btn" onclick="updateQty('${item.id}', -1)">−</button>
+          <input class="qty-val" type="number" value="${item.qty}" min="1"
+            onchange="setQty('${item.id}', this.value)" />
+          <button class="qty-btn" onclick="updateQty('${item.id}', +1)">+</button>
+        </div>
+        <div class="item-price">${fmt(item.price * item.qty)}</div>
+        <button class="remove-btn" onclick="removeFromCart('${item.id}')" title="Remove">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M1 1l10 10M11 1L1 11"/>
+          </svg>
+        </button>
+      </div>
+    `).join('')
+  }</div>`;
+
+  const subtotal  = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const delivery  = subtotal >= 30 ? 0 : 3.90;
+  const total     = subtotal + delivery;
+  const remaining = (30 - subtotal).toFixed(2);
+
+  summaryEl.innerHTML = `
+    <div class="order-summary">
+      <div class="summary-box">
+        <div class="summary-title">Order Summary</div>
+        <div class="summary-row">
+          <span class="summary-row-label">Subtotal</span>
+          <span class="summary-row-value">${fmt(subtotal)}</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row-label">Delivery</span>
+          <span class="summary-row-value ${delivery === 0 ? 'free' : ''}">${delivery === 0 ? 'Free' : fmt(delivery)}</span>
+        </div>
+        <hr class="summary-divider"/>
+        <div class="summary-total-row">
+          <span class="summary-total-label">Total</span>
+          <span class="summary-total-value">${fmt(total)}</span>
+        </div>
+        ${delivery > 0 ? `<div class="free-delivery-note">Add <span>${fmt(parseFloat(remaining))}</span> more for free delivery</div>` : '<div class="free-delivery-note"><span>✓ Free delivery applied</span></div>'}
+        <a href="#" class="btn-checkout">Proceed to Checkout</a>
+      </div>
+    </div>`;
+}
+
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function buildDemo() {
+  document.getElementById('demoProducts').innerHTML = DEMO_PRODUCTS.map(p => `
+    <button class="demo-add" onclick='addToCart(${JSON.stringify(p)})'>
+      <span class="demo-add-plus">+</span>
+      ${p.name}
+      <span class="demo-add-price">${fmt(p.price)}</span>
+    </button>`).join('');
+}
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  if (confirm('Remove all items from your cart?')) clearCart();
+});
+
+buildDemo();
+renderCart();
+</script>
+</body>
+</html>
