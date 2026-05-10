@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Количка - Камист</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-logo">Камист</div>
+        <nav>
+            <a href="../Viktor/index.html">Начало</a>
+            <a href="../Kostadin/about.html">За нас</a>
+            <a href="../Viktor/menu.html">Меню</a>
+            <a href="../Kostadin/custom-cakes.html">Торти по поръчка</a>
+            <a href="../Nikola/reservation.html">Резервации</a>
+            <a href="contact.html">Контакти</a>
+            <a href="cart.html" class="icon-link current-page" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="../Nikola/profile.html" class="icon-link" title="Профил"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </header>
+
+    <main class="cart-main">
+        <section class="cart-head">
+            <h1>Вашата <span class="accent">количка</span></h1>
+            <p class="subhead">Прегледайте избраните продукти и продължете към поръчка.</p>
+        </section>
+
+        <section class="cart-body">
+            <div id="emptyState" class="empty-state" style="display:none">
+                <i class="fa-solid fa-cart-shopping empty-icon"></i>
+                <h3>Количката ви е празна</h3>
+                <a href="../Viktor/menu.html" class="primary-btn">Към менюто</a>
+            </div>
+
+            <div class="cart-layout" id="cartLayout" style="display:none">
+                <div class="cart-items-col">
+                    <div id="cartItems"></div>
+                    <button class="ghost-btn" id="clearBtn">Изчисти количката</button>
+                </div>
+                <aside class="summary-col">
+                    <div id="orderSummary"></div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Камист</h4>
+                <p>Сладки моменти от 2010.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5>Навигация</h5>
+                <a href="../Viktor/index.html">Начало</a>
+                <a href="../Kostadin/about.html">За нас</a>
+                <a href="../Viktor/menu.html">Меню</a>
+                <a href="../Kostadin/custom-cakes.html">Торти по поръчка</a>
+                <a href="../Nikola/reservation.html">Резервации</a>
+                <a href="contact.html">Контакти</a>
+            </div>
+            <div>
+                <h5>Моят профил</h5>
+                <a href="cart.html">Количка</a>
+                <a href="../Nikola/profile.html">Профил</a>
+            </div>
+            <div>
+                <h5>Контакти</h5>
+                <p>ул. Витоша 15, София</p>
+                <p>+359 888 123 456</p>
+                <p>kamistsweets@gmail.com</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Камист.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
