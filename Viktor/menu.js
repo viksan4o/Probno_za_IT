@@ -1,33 +1,34 @@
 const products = [
-    { id: 1, name: "Шоколадова торта", category: "torti", type: "sladko", price: 28,
-      description: "Класическа торта с белгийски шоколад.",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=85&auto=format&fit=crop" },
-    { id: 2, name: "Чийзкейк с горски плодове", category: "torti", type: "sladko", price: 9,
-      description: "Свеж чийзкейк с домашен сос от горски плодове.",
-      image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=85&auto=format&fit=crop" },
-    { id: 3, name: "Веган брауни", category: "deserti", type: "vegan", price: 7,
-      description: "Богато брауни без животински продукти.",
-      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=85&auto=format&fit=crop" },
-    { id: 4, name: "Тарт с лимон", category: "deserti", type: "sladko", price: 8,
-      description: "Хрупкава кора с лимонов крем.",
-      image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=600&q=85&auto=format&fit=crop" },
-    { id: 5, name: "Капучино", category: "napitki", type: "sladko", price: 4,
-      description: "Прясно изпечени зърна и млечна пяна.",
-      image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=85&auto=format&fit=crop" },
-    { id: 6, name: "Лимонада с мента", category: "napitki", type: "vegan", price: 5,
-      description: "Свежа домашна лимонада с прясна мента.",
-      image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=85&auto=format&fit=crop" },
-    { id: 7, name: "Еклер с ванилия", category: "deserti", type: "sladko", price: 5,
-      description: "Класически еклер с ванилов крем и шоколадова глазура.",
-      image: "https://images.unsplash.com/photo-1612203985729-70726954388c?w=600&q=85&auto=format&fit=crop" },
-    { id: 8, name: "Веган чийзкейк", category: "torti", type: "vegan", price: 10,
-      description: "Кашуо-кокосова основа с пресни плодове.",
-      image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=85&auto=format&fit=crop" },
-    { id: 9, name: "Горещ шоколад", category: "napitki", type: "sladko", price: 6,
-      description: "Гъст горещ шоколад с разтопен белгийски шоколад.",
-      image: "https://images.unsplash.com/photo-1517578239113-b03992dcdd25?w=600&q=85&auto=format&fit=crop" }
+    { id: 1, name: "Тирамису", category: "klasicheski", type: "mlechno", price: 8,
+      description: "Ръчно приготвен по семейна рецепта от 2010-та с италианско маскарпоне, прясно сварено еспресо и какао.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/5/58/Tiramisu_-_Raffaele_Diomede.jpg" },
+    { id: 2, name: "Крем брюле", category: "klasicheski", type: "mlechno", price: 9,
+      description: "Кадифен ванилов крем от прясно мляко на местна ферма, с карамелизирана захарна коричка.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/1/17/2014_0531_Cr%C3%A8me_br%C3%BBl%C3%A9e_Doi_Mae_Salong_%28cropped%29.jpg" },
+    { id: 3, name: "Еклер с ванилия", category: "klasicheski", type: "mlechno", price: 5,
+      description: "Печен на ръка чу-пуф с домашен ванилов крем и тъмношоколадова глазура.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Two_Safeway_Chocolate_Eclairs_%2819043880936%29.jpg" },
+    { id: 4, name: "Тарт с лимон", category: "klasicheski", type: "mlechno", price: 8,
+      description: "Хрупкава маслена кора с крем от пресни лимони и щипка ванилия.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Lemon_tart_-_star5112.jpg" },
+    { id: 5, name: "Профитероли", category: "klasicheski", type: "mlechno", price: 10,
+      description: "Малки чу-пуф топчета пълнени с домашен крем шантили и поляти с топъл белгийски шоколад.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/7/75/Paris_2e_-_Rue_Vivienne_-_Restaurant_Le_Vaudeville_-_Profiteroles_au_chocolat.jpg" },
+    { id: 6, name: "Макарони асорти", category: "moderni", type: "mlechno", price: 12,
+      description: "Шест ръчно изпечени френски макарона – ванилия, малина, шамфъстък, шоколад, лимон и карамел.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/1/11/VanillaMacaron.jpg" },
+    { id: 7, name: "Шоколадов мус с малини", category: "moderni", type: "mlechno", price: 9,
+      description: "Лек мус от 70% черен шоколад със свежи български малини и какаов крамбъл.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Cocola_Bakery_Baccara_raspberry_dark_chocolate_mousse_%2837865131355%29.jpg" },
+    { id: 8, name: "Веган брауни с тахан", category: "moderni", type: "vegan", price: 7,
+      description: "Богато какаово брауни с тахан, фурми и стопен черен шоколад – без животински продукти.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Vegan_Chocolate_Dream_Brownies.jpg" },
+    { id: 9, name: "Чия пудинг с манго", category: "moderni", type: "vegan", price: 6,
+      description: "Кокосов чия пудинг с пюре от прясно манго и гранола топинг – без рафинирана захар.",
+      image: "https://images.pexels.com/photos/6544226/pexels-photo-6544226.jpeg" }
 ];
-const typeLabels = { sladko: "Сладко", vegan: "Веган" };
+const BGN_PER_EUR = 1.95583;
+const typeLabels = { mlechno: "С мляко", vegan: "Веган" };
 const catSelect = document.getElementById('catSelect');
 const typeSelect = document.getElementById('typeSelect');
 const searchBox = document.getElementById('searchBox');
@@ -51,7 +52,7 @@ function render() {
                 <h3>${p.name}</h3>
                 <p>${p.description}</p>
                 <div class="card-foot">
-                    <span class="price">${p.price.toFixed(2)} лв</span>
+                    <span class="price">${p.price.toFixed(2)} лв / ${(p.price / BGN_PER_EUR).toFixed(2)} €</span>
                     <button class="buy-btn" data-id="${p.id}">Добави</button>
                 </div>
             </div>

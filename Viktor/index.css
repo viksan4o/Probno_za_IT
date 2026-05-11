@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
 .hero-photo {
     flex: 1;
     height: 420px;
-    background: url('https://images.unsplash.com/photo-1620980776848-84ac10194945?w=1200&q=85&auto=format&fit=crop') center/cover;
+    background: url('images/index/berry%20cookie.avif') center/cover;
     border-radius: 10px;
 }
 .highlights {
@@ -152,7 +152,7 @@ h1, h2, h3, h4 {
 .intro-photo {
     flex: 1;
     height: 380px;
-    background: url('https://images.unsplash.com/photo-1597528662465-55ece5734101?w=1200&q=85&auto=format&fit=crop') center/cover;
+    background: url('images/index/photo%20bakery.avif') center/cover;
     border-radius: 10px;
 }
 footer {
