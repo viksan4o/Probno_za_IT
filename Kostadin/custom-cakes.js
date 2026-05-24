@@ -1,28 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cakeOrderForm = document.getElementById("cakeOrderForm");
-    const formMessage = document.getElementById("formMessage");
+    const successMessageContainer = document.getElementById("successMessageContainer");
 
     cakeOrderForm.addEventListener("submit", function(event) {
         event.preventDefault();
+        
         const requiredFields = cakeOrderForm.querySelectorAll("[required]");
-        let Valid = true;
+        let isValid = true;
+
         requiredFields.forEach(field => {
-            if (!field.value) {
-                Valid = false;
+            field.classList.remove("error");
+        });
+
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
                 field.classList.add("error");
-            } else {
-                field.classList.remove("error");
             }
         });
-        if (Valid) {
-            formMessage.classList.remove("hidden", "error");
-            formMessage.classList.add("success");
-            formMessage.textContent = "Благодарим! Ще се свържем с Вас за потвърждение до 24 часа.";
+
+        if (isValid) {
+            successMessageContainer.textContent = "Благодарим! Ще се свържем с Вас за потвърждение до 24 часа.";
+            successMessageContainer.classList.remove("hidden");
+            successMessageContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
             cakeOrderForm.reset();
         } else {
-            formMessage.classList.remove("hidden", "success");
-            formMessage.classList.add("error");
-            formMessage.textContent = "Моля попълнете всички полета!";
+            alert("Моля попълнете всички задължителни полета!");
         }
     });
 });

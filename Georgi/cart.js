@@ -1,10 +1,8 @@
 const KEY = 'cart';
-const FREE_SHIP = 50;
-const SHIP_FEE = 5;
 
 const load = () => JSON.parse(localStorage.getItem(KEY) || '[]');
 const save = c => localStorage.setItem(KEY, JSON.stringify(c));
-const fmt = n => n.toFixed(2) + ' лв';
+const fmt = n => n.toFixed(2) + ' евро';
 
 const itemsEl = document.getElementById('cartItems');
 const summaryEl = document.getElementById('orderSummary');
@@ -41,6 +39,8 @@ function toast(msg) {
     toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000);
 }
 
+const esc = s => s.replace(/"/g, '&quot;');
+
 function render() {
     const cart = load();
 
@@ -73,27 +73,50 @@ function render() {
         </div>
     `).join('');
 
-    const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    const ship = subtotal >= FREE_SHIP ? 0 : SHIP_FEE;
-    const total = subtotal + ship;
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    const addr = esc(localStorage.getItem('cart_address') || '');
+    const email = esc(localStorage.getItem('cart_email') || '');
+    const phone = esc(localStorage.getItem('cart_phone') || '');
 
     summaryEl.innerHTML = `
         <div class="summary-box">
             <h3>Обобщение</h3>
-            <div class="summary-row"><span>Междинна сума</span><span>${fmt(subtotal)}</span></div>
-            <div class="summary-row">
-                <span>Доставка</span>
-                <span class="${ship === 0 ? 'free-tag' : ''}">${ship === 0 ? 'Безплатна' : fmt(ship)}</span>
+
+            <div class="delivery-badge">
+                <i class="fa-solid fa-truck"></i>
+                <div>
+                    <strong>Безплатна доставка</strong>
+                    Получавате поръчката си до 1 седмица.
+                </div>
             </div>
+
+            <div class="field">
+                <label for="addressInput">Адрес за доставка</label>
+                <input id="addressInput" type="text" placeholder="ул., №, град"
+                       value="${addr}"
+                       oninput="localStorage.setItem('cart_address', this.value)">
+            </div>
+
+            <div class="field">
+                <label for="emailInput">Имейл</label>
+                <input id="emailInput" type="email" placeholder="вашият@имейл.bg"
+                       value="${email}"
+                       oninput="localStorage.setItem('cart_email', this.value)">
+            </div>
+
+            <div class="field">
+                <label for="phoneInput">Телефон</label>
+                <input id="phoneInput" type="tel" placeholder="+359 ..."
+                       value="${phone}"
+                       oninput="localStorage.setItem('cart_phone', this.value)">
+            </div>
+
             <hr class="summary-divider">
             <div class="summary-total">
                 <span>Общо</span>
                 <span>${fmt(total)}</span>
             </div>
-            ${ship > 0
-                ? `<p class="delivery-note">Добавете <span>${fmt(FREE_SHIP - subtotal)}</span> за безплатна доставка</p>`
-                : `<p class="delivery-note"><span>✓ Безплатна доставка</span></p>`}
-            <a href="#" class="primary-btn">Към плащане</a>
+            <a href="#" class="primary-btn">Направи поръчка</a>
         </div>
     `;
 }
