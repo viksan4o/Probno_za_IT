@@ -119,6 +119,27 @@ function render() {
             <a href="#" class="primary-btn">Направи поръчка</a>
         </div>
     `;
+    const orderBtn = summaryEl.querySelector('.primary-btn');
+    if (orderBtn) {
+        orderBtn.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            const address = (document.getElementById('addressInput') || {}).value || '';
+            const email = (document.getElementById('emailInput') || {}).value || '';
+            const phone = (document.getElementById('phoneInput') || {}).value || '';
+
+            if (!address.trim() || !email.trim() || !phone.trim()) {
+                toast('Моля, попълнете адрес, имейл и телефон');
+                return;
+            }
+
+            save([]);
+            localStorage.removeItem('cart_address');
+            localStorage.removeItem('cart_email');
+            localStorage.removeItem('cart_phone');
+            toast('Поръчката е приета');
+            render();
+        });
+    }
 }
 
 document.getElementById('clearBtn').addEventListener('click', clear);
