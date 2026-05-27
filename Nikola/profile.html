@@ -18,22 +18,34 @@
             <a href="../Kostadin/custom-cakes.html">Торти по поръчка</a>
             <a href="reservation.html">Резервации</a>
             <a href="../Georgi/contact.html">Контакти</a>
-            <a href="../Georgi/cart.html" class="nav-icon" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="../cart.html" class="nav-icon" title="Количка"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="profile.html" class="nav-icon active" title="Профил"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
 
+    <section class="intro-section">
+        <div class="hero-content">
+            <h1 class="page-title">Направете си <span class="highlight-text">профил</span> за по-лесни поръчки</h1>
+            <p class="page-subtitle">Управлявайте лесно вашите данни.</p>
+        </div>
+    </section>
+
     <main class="profile-container">
         <section class="profile-sidebar">
-            <div class="user-avatar">
-                <i class="fa-solid fa-circle-user"></i>
+            <div class="user-avatar" id="avatar-container">
+                <div class="avatar-wrapper">
+                    <i class="fa-solid fa-circle-user" id="profile-icon"></i>
+                    <img id="profile-img" src="" alt="Профилна снимка" style="display: none;">
+                    <div class="upload-overlay" id="upload-overlay">
+                        <i class="fa-solid fa-camera"></i>
+                        <input type="file" id="profile-upload" accept="image/*">
+                    </div>
+                </div>
                 <h2 id="display-name">Здравей!</h2>
-                <p>Лоялен клиент</p>
             </div>
             <nav class="profile-nav">
-                <button class="nav-btn active" onclick="showTab('info')"><i class="fa-solid fa-user-gear"></i> Данни</button>
-                <button class="nav-btn" onclick="showTab('orders')"><i class="fa-solid fa-bag-shopping"></i> Поръчки</button>
-                <button class="nav-btn logout"><i class="fa-solid fa-right-from-bracket"></i> Изход</button>
+                <button id="edit-profile-btn" class="nav-btn" type="button"><i class="fa-solid fa-user-gear"></i> Редактиране на данни</button>
+                <button class="nav-btn logout" type="button"><i class="fa-solid fa-right-from-bracket"></i> Изход</button>
             </nav>
         </section>
 
@@ -41,48 +53,25 @@
             <div id="info-tab" class="tab-content active">
                 <h3>Лични данни</h3>
                 <form id="profile-form">
-                    <div class="input-group">
+                    <div class="input-group tooltip-container">
                         <label>Име</label>
-                        <input type="text" id="user-name" value="Калоян Георгиев">
+                        <input type="text" id="user-name" value="Калоян Георгиев" disabled>
+                        <span class="tooltip-text">Натисни бутона редактиране на данни за промени</span>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group tooltip-container">
                         <label>Имейл</label>
-                        <input type="email" id="user-email" value="kaloian@mail.bg">
+                        <input type="email" id="user-email" value="kaloian@mail.bg" disabled>
+                        <span class="tooltip-text">Натисни бутона редактиране на данни за промени</span>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group tooltip-container">
                         <label>Телефон</label>
-                        <input type="text" id="user-phone" value="+359 888 111 222">
+                        <input type="text" id="user-phone" value="+359 888 111 222" disabled>
+                        <span class="tooltip-text">Натисни бутона редактиране на данни за промени</span>
                     </div>
-                    <button type="submit" class="save-btn">Запази промените</button>
+                    <div class="form-actions">
+                        <button id="save-profile-btn" class="save-btn" type="button" style="display: none;">Запази промените</button>
+                    </div>
                 </form>
-            </div>
-
-            <div id="orders-tab" class="tab-content">
-                <h3>История на поръчките</h3>
-                <table class="orders-table">
-                    <thead>
-                        <tr>
-                            <th>Номер</th>
-                            <th>Дата</th>
-                            <th>Сума</th>
-                            <th>Статус</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#4521</td>
-                            <td>12.04.2026</td>
-                            <td>45.50 лв.</td>
-                            <td><span class="status delivered">Доставена</span></td>
-                        </tr>
-                        <tr>
-                            <td>#4589</td>
-                            <td>02.05.2026</td>
-                            <td>22.10 лв.</td>
-                            <td><span class="status pending">Обработва се</span></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </section>
     </main>

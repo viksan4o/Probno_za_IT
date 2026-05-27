@@ -115,7 +115,7 @@ footer a:hover {
     justify-content: center;
 }
 .reservation-card {
-    background: white;
+    background: #faebd6;
     max-width: 900px;
     width: 100%;
     display: grid;

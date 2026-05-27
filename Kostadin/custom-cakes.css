@@ -201,7 +201,6 @@ footer a:hover {
     display: none;
 }
 
-/* Success and Error Message Styling */
 #successMessageContainer {
     max-width: 900px;
     margin: 20px auto;
